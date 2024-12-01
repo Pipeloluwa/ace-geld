@@ -10,7 +10,7 @@ import { MdCable, MdHub } from 'react-icons/md';
 
 
 
-export const rootUrl = "http://localhost:3000";
+export const rootUrl = "https://ace-geld-git-main-papic-nation.vercel.app/";
 
 
 
