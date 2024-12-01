@@ -197,7 +197,7 @@ export const TourComponent = () => {
             initial={"offscreen"}
             whileInView={"onscreen"}
 
-            className='lg:w-[50%] h-[530px] bg-gray-300 overflow-hidden'>
+            className='lg:w-[50%] lg:h-[530px] h-[400px] bg-gray-300 overflow-hidden'>
 
             <img alt='project picture' src={'images/pictures/others/tour.webp'} className='flex w-full h-full object-cover' />
 

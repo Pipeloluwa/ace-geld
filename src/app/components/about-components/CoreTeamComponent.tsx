@@ -56,7 +56,7 @@ export const CoreTeamComponent = () => {
 
                                 className='lg:w-[30%] min-h-[400px] bg-gray-300 shadow-md shadow-gray-500 overflow-hidden'>
 
-                                <img alt='project picture' src={item.picture} className='flex w-full h-full object-cover' />
+                                <img alt='project picture' src={item.picture} className='flex w-full min-h-[400px] h-full object-cover' />
 
                             </motion.div>
 

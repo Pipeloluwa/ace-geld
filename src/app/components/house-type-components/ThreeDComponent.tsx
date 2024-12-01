@@ -54,8 +54,8 @@ export const ThreeDComponent: React.FC<IThreeD> = ({ link_3d }) => {
 
 
                 <button onClick={() => setFullScreenState(value => !value)}
-                    className={`${fullScreenState ? "z-50 fixed left-4 top-4" : "absolute left-4 top-4"} 
-                         tracking-widest text-[15px] bg-black/20 text-white h-[40px] p-3 rounded-lg
+                    className={`${fullScreenState ? "z-50 fixed left-2 top-4" : "absolute left-2 top-4"} 
+                         tracking-widest text-[15px] bg-black text-white h-[40px] p-3 rounded-lg
                         `}
                 >
 

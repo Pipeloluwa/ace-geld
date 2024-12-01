@@ -17,8 +17,10 @@ interface IVideoComponent {
 const VideoComponent: React.FC<IVideoComponent> = ({ setVideoLoadState }) => {
     const videoRef: React.LegacyRef<HTMLVideoElement> = useRef(null);
 
+
     return (
         <motion.video
+            ref={videoRef}
             onCanPlay={() => {videoRef.current?.play(); setTimeout(() => setVideoLoadState(true), 1000)}}
             autoPlay muted loop playsInline
             viewport={{ once: true }}

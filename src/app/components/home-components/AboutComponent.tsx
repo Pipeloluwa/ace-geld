@@ -63,7 +63,7 @@ export const AboutComponent = () => {
 
                     className='lg:w-[50%] w-full min-h-[500px] bg-gray-300 overflow-hidden'>
 
-                    <img alt='about picture' src='images/pictures/pages/about.webp' className='flex w-full h-full object-cover' />
+                    <img alt='about picture' src='images/pictures/pages/about.webp' className='flex w-full min-h-[500px] h-full object-cover' />
 
                 </motion.div>
 

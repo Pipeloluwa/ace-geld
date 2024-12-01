@@ -67,9 +67,9 @@ export const ProjectsInfoComponent: React.FC<IProjectInfo> = (props) => {
                     whileInView={"onscreen"}
                     custom={0}
 
-                    className='lg:w-[50%] min-h-[500px] bg-gray-300 shadow-md shadow-gray-500 overflow-hidden'>
+                    className='lg:w-[50%] lg:min-h-[500px] min-h-[400px] bg-gray-300 shadow-md shadow-gray-500 overflow-hidden'>
 
-                    <img alt='project picture' src={props.projectData.picture} className='flex w-full h-full object-cover' />
+                    <img alt='project picture' src={props.projectData.picture} className='flex w-full lg:min-h-[500px] min-h-[400px] h-full object-cover' />
                 </motion.div>
 
 

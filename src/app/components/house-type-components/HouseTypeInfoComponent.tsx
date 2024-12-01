@@ -312,9 +312,9 @@ export const HouseTypeInfoComponent: React.FC<IHouseTypeInfo> = (props) => {
                     initial={"offscreen"}
                     whileInView={"onscreen"}
 
-                    className='lg:w-[50%] w-full min-h-[500px] bg-gray-300 shadow-md shadow-gray-500 overflow-hidden'>
+                    className='lg:w-[50%] w-full lg:min-h-[500px] min-h-[400px] bg-gray-300 shadow-md shadow-gray-500 overflow-hidden'>
 
-                    <img alt='house type picture' src={props.houseData.picture} className='flex w-full h-full object-cover' />
+                    <img alt='house type picture' src={props.houseData.picture} className='flex w-full lg:min-h-[500px] min-h-[400px] h-full object-cover' />
 
 
                 </motion.div>
