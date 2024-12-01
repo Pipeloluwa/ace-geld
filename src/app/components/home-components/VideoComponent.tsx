@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic';
 
 import { animateBlurIn } from '@/app/animation/animationVariants'
 import { motion } from 'motion/react'
-import React from 'react';
+import React, { useRef } from 'react';
 import { WelcomeSuspense } from '../suspense-components/WelcomeSuspense';
 
 
@@ -15,9 +15,11 @@ interface IVideoComponent {
 
 
 const VideoComponent: React.FC<IVideoComponent> = ({ setVideoLoadState }) => {
+    const videoRef: React.LegacyRef<HTMLVideoElement> = useRef(null);
+
     return (
         <motion.video
-            onCanPlay={() => setTimeout(() => setVideoLoadState(true), 1000)}
+            onCanPlay={() => {videoRef.current?.play(); setTimeout(() => setVideoLoadState(true), 1000)}}
             autoPlay muted loop playsInline
             viewport={{ once: true }}
             variants={animateBlurIn}
