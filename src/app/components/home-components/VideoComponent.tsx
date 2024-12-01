@@ -17,7 +17,7 @@ interface IVideoComponent {
 const VideoComponent: React.FC<IVideoComponent> = ({ setVideoLoadState }) => {
     return (
         <motion.video
-            onLoadedData={() => setTimeout(() => setVideoLoadState(true), 1000)}
+            onCanPlay={() => setTimeout(() => setVideoLoadState(true), 1000)}
             autoPlay muted loop playsInline
             viewport={{ once: true }}
             variants={animateBlurIn}

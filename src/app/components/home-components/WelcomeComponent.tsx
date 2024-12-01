@@ -11,7 +11,6 @@ import { animateBlurIn, animateGradualSpacing, animateVisible } from '@/app/anim
 import VideoComponent from './VideoComponent';
 
 export const WelcomeComponent = () => {
-    const videoRef: React.LegacyRef<HTMLVideoElement> = useRef(null)
     const [videoLoadState, setVideoLoadState] = useState<boolean>(false);
 
 
