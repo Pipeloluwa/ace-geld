@@ -61,9 +61,9 @@ export const AboutComponent = () => {
                     initial={"offscreen"}
                     whileInView={"onscreen"}
 
-                    className='lg:w-[50%] w-full min-h-[500px] bg-gray-300 overflow-hidden'>
+                    className='lg:w-[50%] w-full lg:min-h-[500px] min-h-[400px] bg-gray-300 overflow-hidden'>
 
-                    <img alt='about picture' src='images/pictures/pages/about.webp' className='flex w-full min-h-[500px] h-full object-cover' />
+                    <img alt='about picture' src='images/pictures/pages/about.webp' className='flex w-full lg:min-h-[500px] min-h-[400px] h-full object-cover' />
 
                 </motion.div>
 
