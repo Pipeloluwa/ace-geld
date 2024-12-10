@@ -57,7 +57,7 @@ export const ServiceComponent = () => {
           custom={0.5}
           className="text-sm"
         >
-          {`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin suscipit, tortor et consectetur vulputate, sapien enim gravida orci, sed facilisis nunc nunc vel ante. Nulla facilisi. Ut ac elit in risus pharetra cursus. Aliquam erat`}
+          {`At Acegeld, we specialize in bringing your vision to life with our wide range of services. From Construction Services—offering tailored solutions for residential and commercial projects, ensuring durability and perfection—to Interior Design, where we craft spaces that reflect your personality and enhance functionality. Our Decoration & Styling experts add the perfect touch of charm and sophistication to your space with bespoke designs and finishes.`}
         </motion.p>
       </div>
 
