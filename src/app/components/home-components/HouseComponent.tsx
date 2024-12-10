@@ -49,7 +49,7 @@ export const HouseComponent = () => {
     return (
         <div className='w-full md:h-[900px] sm:-[800px] h-[700px] mx-auto flex flex-col justify-center items-center gap-y-10'>
 
-            <div className='lg:w-[70%] mx-auto flex flex-col gap-y-3'>
+            <div className='2xl:w-[1200px] xl:w-[75%] lg:w-[85%] w-[90%] mx-auto flex flex-col gap-y-3'>
                 <motion.h2
                     variants={animateFadeDown}
                     initial={"offscreen"}
