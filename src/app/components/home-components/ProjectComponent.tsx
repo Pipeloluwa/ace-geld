@@ -38,7 +38,7 @@ export const ProjectComponent = () => {
                 >
 
                     <p className='text-sm'>
-                        {`"Discover Your Dream Home: Explore our curated listings of stunning properties tailored to fit every lifestyle and budget. Your perfect space awaits!`}
+                        {`Discover Your Dream Home: Explore our curated listings of stunning properties tailored to fit every lifestyle and budget. Your perfect space awaits!`}
                     </p>
 
                     <div className='flex w-full'>
