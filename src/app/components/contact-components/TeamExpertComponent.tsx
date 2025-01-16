@@ -55,7 +55,7 @@ export const TeamExpertComponent = () => {
       <div className='h-full grid lg:grid-cols-2 grid-cols-1 gap-8'>
         {
           teamExpertData.map((item, index) =>
-            <div key={`teamExperData${index}`} className='flex items-center gap-x-5'>
+            <div key={`teamExperData${index}`} className='flex w-full items-center gap-x-5'>
 
               <motion.div
                     viewport={{once: true}}
