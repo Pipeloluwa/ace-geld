@@ -71,7 +71,7 @@ export const TeamExpertComponent = () => {
               </motion.div>
 
 
-              <div className='flex flex-col'>
+              <div className='flex w-full flex-col'>
 
                 <div className='flex flex-wrap'>
                   {
