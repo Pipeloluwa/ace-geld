@@ -63,7 +63,7 @@ export const TeamExpertComponent = () => {
                 initial={"offscreen"}
                 whileInView={"onscreen"}
 
-                className='size-[130px] rounded-full overflow-hidden bg-gray-300 shadow'
+                className=' w-[180px] h-full flex rounded-full overflow-hidden bg-gray-300 shadow'
               >
 
                 <img alt='project picture' src={item.picture} className='flex w-full h-full object-cover' />
