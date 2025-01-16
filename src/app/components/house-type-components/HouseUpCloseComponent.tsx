@@ -9,10 +9,11 @@ export const HouseUpCloseComponent: React.FC<IHouseUpClose> = ({ link_3d, pictur
         <div className='2xl:w-[75%] w-[90%] mx-auto flex flex-col justify-center gap-y-10'>
 
 
-            <div className='flex'>
+            <div className='flex flex-wrap'>
                 {
                     "The house gallery".split("").map((char, index) =>
                         <motion.p
+                    viewport={{once: true}}
                             key={`houseGallery${index}`}
                             variants={animateGradualSpacing}
                             initial={"offscreen"}
@@ -35,6 +36,7 @@ export const HouseUpCloseComponent: React.FC<IHouseUpClose> = ({ link_3d, pictur
                 {
                     picture.map((item, index) =>
                         <motion.div
+                    viewport={{once: true}}
                             key={`houseUpClose${index}`}
                             variants={animateFadeUp}
                             initial={"offscreen"}

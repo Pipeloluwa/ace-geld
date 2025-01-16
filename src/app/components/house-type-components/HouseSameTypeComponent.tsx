@@ -8,10 +8,11 @@ export const HouseSameTypeComponent: React.FC<IProjectsHouseType> = ({ title, pr
         <div className='2xl:w-[75%] w-[90%] mx-auto flex flex-col justify-center gap-y-10'>
 
 
-            <div className='flex'>
+            <div className='flex flex-wrap'>
                 {
                     `Houses with the same ${title}`.split("").map((char, index) =>
                         <motion.p
+                    viewport={{once: true}}
                             key={`Welcome to${index}`}
                             variants={animateGradualSpacing}
                             initial={"offscreen"}
@@ -33,6 +34,7 @@ export const HouseSameTypeComponent: React.FC<IProjectsHouseType> = ({ title, pr
                 {
                     projectsHouseType.map((item, index) =>
                         <motion.div
+                    viewport={{once: true}}
                             key={`houseSameType${index}`}
                             variants={index % 2 === 0 ? animateFromLeft : animateFromRight}
                             initial={"offscreen"}
@@ -46,6 +48,7 @@ export const HouseSameTypeComponent: React.FC<IProjectsHouseType> = ({ title, pr
                             </div>
 
                             <motion.h3
+                    viewport={{once: true}}
                                 variants={animateFadeUp}
                                 initial={"offscreen"}
                                 whileInView={"onscreen"}
@@ -56,6 +59,7 @@ export const HouseSameTypeComponent: React.FC<IProjectsHouseType> = ({ title, pr
                             </motion.h3>
 
                             <motion.p
+                    viewport={{once: true}}
                                 variants={animateFadeUp}
                                 initial={"offscreen"}
                                 whileInView={"onscreen"}

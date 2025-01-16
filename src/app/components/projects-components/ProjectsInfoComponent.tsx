@@ -15,10 +15,11 @@ export const ProjectsInfoComponent: React.FC<IProjectInfo> = (props) => {
 
                     <div className=' flex flex-col gap-y-3'>
 
-                        <div className='flex'>
+                        <div className='flex flex-wrap'>
                             {
                                 props.title.split("").map((char, index) =>
                                     <motion.p
+                    viewport={{once: true}}
                                         key={`Welcome to${index}`}
                                         variants={animateGradualSpacing}
                                         initial={"offscreen"}
@@ -35,7 +36,9 @@ export const ProjectsInfoComponent: React.FC<IProjectInfo> = (props) => {
                         </div>
 
 
-                        <motion.h3
+                        {/* <motion.h3
+                    viewport={{once: true}}
+                    viewport={{once: true}}
                             variants={animateFadeUp}
                             initial={"offscreen"}
                             whileInView={"onscreen"}
@@ -43,9 +46,10 @@ export const ProjectsInfoComponent: React.FC<IProjectInfo> = (props) => {
 
                             className='italic'>
                             {props.projectData.location}
-                        </motion.h3>
+                        </motion.h3> */}
 
                         <motion.p
+                    viewport={{once: true}}
                             variants={animateFadeUp}
                             initial={"offscreen"}
                             whileInView={"onscreen"}
@@ -62,6 +66,7 @@ export const ProjectsInfoComponent: React.FC<IProjectInfo> = (props) => {
 
 
                 <motion.div
+                    viewport={{once: true}}
                     variants={animateBlurIn}
                     initial={"offscreen"}
                     whileInView={"onscreen"}

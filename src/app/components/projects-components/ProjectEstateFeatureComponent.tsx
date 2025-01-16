@@ -42,10 +42,11 @@ export const ProjectEstateFeatureComponent: React.FC<IEstateData> = ({ estate_fe
 
         <div className='2xl:w-[75%] w-[90%] mx-auto flex flex-col justify-center gap-y-10'>
 
-            <div className='flex'>
+            <div className='flex flex-wrap'>
                 {
                     "Project Features".split("").map((char, index) =>
                 <motion.p
+                    viewport={{once: true}}
                     key={`"Project Features${index}`}
                     variants={animateGradualSpacing}
                     initial={"offscreen"}
@@ -85,7 +86,7 @@ export const ProjectEstateFeatureComponent: React.FC<IEstateData> = ({ estate_fe
                         slidesToShow={isMin1140 ? 3 : isMin960 ? 2 : 1}
                         slidesToScroll={isMin1140 ? 3 : isMin960 ? 2 : 1}
                         infinite={true}
-                        speed={1600}
+                        speed={3600}
                         autoplay={true}
                         pauseOnHover={true}
                         className="w-full"
@@ -98,6 +99,7 @@ export const ProjectEstateFeatureComponent: React.FC<IEstateData> = ({ estate_fe
                                         <div className='mx-auto p-6 flex flex-col items-center gap-y-6'>
 
                                             <motion.div
+                    viewport={{once: true}}
                                                 variants={animateRotateFromLeft}
                                                 initial={"offscreen"}
                                                 whileInView={"onscreen"}
@@ -110,10 +112,11 @@ export const ProjectEstateFeatureComponent: React.FC<IEstateData> = ({ estate_fe
 
                                             <div className='flex flex-col gap-y-2'>
 
-                                                <div className='flex'>
+                                                <div className='flex flex-wrap'>
                                                     {
                                                         item.title.split("").map((char, index) =>
                                                             <motion.p
+                    viewport={{once: true}}
                                                                 key={`Welcome to${index}`}
                                                                 variants={animateGradualSpacing}
                                                                 initial={"offscreen"}
@@ -133,6 +136,7 @@ export const ProjectEstateFeatureComponent: React.FC<IEstateData> = ({ estate_fe
                                                 <div className='border-[1px] border-gray-700' />
 
                                                 <motion.p
+                    viewport={{once: true}}
                                                     variants={animateFromRight}
                                                     initial={"offscreen"}
                                                     whileInView={"onscreen"}

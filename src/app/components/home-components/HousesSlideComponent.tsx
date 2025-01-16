@@ -5,7 +5,10 @@ import { animateBlurIn } from '@/app/animation/animationVariants';
 
 export const HousesSlideComponent = () => {
     const houseTypes= [
-        "Acacia", "Oak","Oakville","Scarlet Oak","Maple","Maple Penthouse","Pine","Pine Penthouse","Château","Olive","Villa","The Nouveau Villa"
+        "Unparalleled Construction", "Finishing","Furnishing Services", "Interior Aesthetics", 
+        "Timeless Elegance", "Flawless Detailing", "Exquisite Touches", "Structural Brilliance", 
+        "Luxurious Refinement", "Custom Furniture Design", "Elegant Decor Solutions", 
+        "Complete Home Styling", "Sustainable Designs", "Contemporary Furnishings", "Architectural Excellence"
     ];
 
 
@@ -15,12 +18,13 @@ export const HousesSlideComponent = () => {
         {
             houseTypes.map((item, index) => {
                 return (
-                    <motion.p 
+                    <motion.p
+                    viewport={{once: true}} 
                         key={`inspirationalKey${index}`} 
                         variants={animateBlurIn}
                         initial={"offscreen"}
                         whileInView= {"onscreen"}
-                        className={`${pacificoFont.className} min-w-[200px] w-full text-center text-lg text-gray-800 tracking-wider`}>
+                        className={`${pacificoFont.className} min-w-[260px] text-center text-lg text-gray-800 tracking-wider`}>
                         
                         {item}
                     </motion.p>

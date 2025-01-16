@@ -43,7 +43,8 @@ export const EstateFeatureComponent:React.FC<IEstateData> = ({estate_features}) 
 
             <div className="skew-y-3 w-full h-screen flex flex-col gap-y-12 gap-x-3 justify-center items-center">
 
-                <motion.h2 
+                <motion.h2
+                    viewport={{once: true}} 
                     variants={animateFadeDown}
                     initial={"offscreen"}
                     whileInView={"onscreen"}
@@ -85,7 +86,8 @@ export const EstateFeatureComponent:React.FC<IEstateData> = ({estate_features}) 
                             {
                                 estate_features.map((item, index) => {
                                     return (
-                                        <motion.div 
+                                        <motion.div
+                    viewport={{once: true}} 
                                             key={`estateFeaturesDataKey${index}`} 
                                             variants={animateFadeUp}
                                             initial={"offscreen"}
@@ -105,7 +107,7 @@ export const EstateFeatureComponent:React.FC<IEstateData> = ({estate_features}) 
                                                 </motion.div>
 
 
-                                                <motion.div 
+                                                <motion.div
                                                     variants={animateFadeUp}
                                                     initial={"offscreen"}
                                                     whileInView={"onscreen"}
@@ -148,14 +150,16 @@ export const EstateFeatureComponent:React.FC<IEstateData> = ({estate_features}) 
                 </div>
 
 
-                <motion.hr 
+                <motion.hr
+                    viewport={{once: true}} 
                     variants={animateFadeUp}
                     initial={"offscreen"}
                     whileInView={"onscreen"}
                     custom={0}
                     className='w-[75%] mx-auto text-white'/>
 
-                <motion.p 
+                <motion.p
+                    viewport={{once: true}} 
                     variants={animateFadeUp}
                     initial={"offscreen"}
                     whileInView={"onscreen"}

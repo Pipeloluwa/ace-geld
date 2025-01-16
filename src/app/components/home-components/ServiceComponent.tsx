@@ -41,6 +41,7 @@ export const ServiceComponent = () => {
     <div className="2xl:w-[1200px] xl:w-[75%] lg:w-[85%] w-[90%] mx-auto flex flex-col justify-center items-center gap-y-10">
       <div className="lg:w-[70%] w-full mx-auto flex flex-col gap-y-3">
         <motion.h2
+          viewport={{once: true}}
           variants={animateFadeDown}
           initial={"offscreen"}
           whileInView={"onscreen"}
@@ -51,6 +52,7 @@ export const ServiceComponent = () => {
         </motion.h2>
 
         <motion.p
+          viewport={{once: true}}
           variants={animateFadeUp}
           initial={"offscreen"}
           whileInView={"onscreen"}
@@ -66,6 +68,7 @@ export const ServiceComponent = () => {
           {servicesData.map((item, index) => (
             <motion.div
               key={`serviceDataSample${index}`}
+              viewport={{once: true}}
               variants={index % 2 === 0 ? animateFromRight : animateFromLeft}
               initial={"offscreen"}
               whileInView={"onscreen"}
@@ -84,6 +87,7 @@ export const ServiceComponent = () => {
         </div>
 
         <motion.div
+          viewport={{once: true}}
           variants={animateBlurIn}
           initial={"offscreen"}
           whileInView={"onscreen"}

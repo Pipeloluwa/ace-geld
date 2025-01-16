@@ -18,35 +18,51 @@ import { PiUsersThree } from "react-icons/pi";
 
 export const InfoComponent = () => {
   const divHistoryRef: LegacyRef<HTMLDivElement> = useRef(null);
-  const divHistoryView = useInView(divHistoryRef);
+  const divHistoryView = useInView(divHistoryRef, {once: true});
 
   const divIntroRef: LegacyRef<HTMLDivElement> = useRef(null);
-  const divIntroView = useInView(divHistoryRef);
+  const divIntroView = useInView(divHistoryRef, {once: true});
 
   const divCounterRef: LegacyRef<HTMLDivElement> = useRef(null);
-  const divCounterView = useInView(divCounterRef);
+  const divCounterView = useInView(divCounterRef, {once: true});
 
   return (
     <div className="2xl:w-[75%] w-[90%] mx-auto flex flex-col justify-center gap-y-16">
       <div className="w-full flex flex-col gap-y-6">
-        <div ref={divIntroRef}>
+        <div ref={divIntroRef} className="flex flex-col gap-y-2">
           <motion.p
+                    viewport={{once: true}}
             variants={animateFadeDown}
             initial={"offscreen"}
             animate={divIntroView ? "onscreen" : ""}
-            custom={0}
+            custom={0.4}
             className="text-justify text-sm"
           >
             {
-              "Welcome to Acegeld where innovation meets craftsmanship. We are a leading construction, design, and interior decoration company dedicated to transforming spaces into functional and aesthetic masterpieces. With a passion for excellence and an eye for detail, we bring your vision to life with precision and creativity."
+              "Welcome to Acegeld, a premier service-oriented company renowned for her expertise in construction, high-quality finishes and top-tier furnishing solutions. Known for delivering excellence and innovation, we tailor our services to meet diverse needs of clients both locally and internationally."
             }
           </motion.p>
+
+          <motion.p
+                    viewport={{once: true}}
+            variants={animateFadeDown}
+            initial={"offscreen"}
+            animate={divIntroView ? "onscreen" : ""}
+            custom={0.2}
+            className="text-justify text-sm"
+          >
+            {
+              "At Acegeld, our commitment to quality, precision and client satisfaction defines everything we do. We combine modern techniques with timeless design principles to create spaces that inspire. From homes that bring loved ones closer to organizational space that foster collaboration and innovation, we design with purpose and passion. At Acegeld, we craft spaces that excites connection, celebrate togetherness and elevate everyday living."
+            }
+          </motion.p>
+
         </div>
 
         <div className="w-full flex flex-col gap-y-3">
           <div ref={divHistoryRef} className="flex">
             {"Who We Are".split("").map((char, index) => (
               <motion.p
+                    viewport={{once: true}}
                 key={`Our History${index}`}
                 variants={animateGradualSpacing}
                 initial={"offscreen"}
@@ -61,20 +77,33 @@ export const InfoComponent = () => {
           </div>
 
           <motion.p
+                    viewport={{once: true}}
             variants={animateFadeUp}
             initial={"offscreen"}
             whileInView={"onscreen"}
             custom={0}
             className="text-justify text-sm"
           >
-            {`At Acegeld, we are a team of skilled architects, designers, and craftsmen committed to delivering top-quality construction and interior solutions. With years of industry expertise, we combine modern techniques with timeless design principles to create spaces that reflect your style and meet your needs.`}
+            {`At Acegeld, we are a team of seasoned professionals and 
+              skilled technicians committed to delivering safe, structurally stable, 
+              functional and aesthetically captivating building projects. Our approach 
+              focuses on innovation, attention to detail and a deep understanding of our 
+              clients’ visions, ensuring every project reflects their unique needs and 
+              aspirations. With dedication to quality control and excellence at every 
+              stage/phase, we transform ideas into spaces that inspire, elevate and stands 
+              the test of time.
+            `}
           </motion.p>
         </div>
 
+
+
+
         <div className="w-full flex flex-col gap-y-3">
           <div className="flex ">
-            {"Our Mision".split("").map((char, index) => (
+            {"Our Vision".split("").map((char, index) => (
               <motion.p
+                    viewport={{once: true}}
                 key={`Welcome to${index}`}
                 variants={animateGradualSpacing}
                 initial={"offscreen"}
@@ -89,6 +118,7 @@ export const InfoComponent = () => {
           </div>
 
           <motion.p
+                    viewport={{once: true}}
             variants={animateFadeUp}
             initial={"offscreen"}
             whileInView={"onscreen"}
@@ -96,15 +126,22 @@ export const InfoComponent = () => {
             className="text-justify text-sm"
           >
             {
-              "Our mission is to redefine living and working spaces through thoughtful design and superior craftsmanship. We aim to exceed expectations by providing innovative solutions that balance functionality, elegance, and sustainability."
+              ` To be the leading service-oriented company, setting the 
+                benchmark in construction, finishing and furnishing through innovative 
+                solutions, exceptional craftsmanship and timely delivery. At Acegeld, we 
+                strive to exceed expectations, transform visions to remarkable realities and 
+                become the number one choice for quality and excellence.`
             }
           </motion.p>
         </div>
+
+
 
         <div className="w-full flex flex-col gap-y-3">
           <div className="flex ">
             {"What We Do".split("").map((char, index) => (
               <motion.p
+                    viewport={{once: true}}
                 key={`Welcome to${index}`}
                 variants={animateGradualSpacing}
                 initial={"offscreen"}
@@ -118,78 +155,33 @@ export const InfoComponent = () => {
             ))}
           </div>
 
-          <ul className="flex flex-col gap-y-3">
-            <motion.li
-              variants={animateFadeUp}
-              initial={"offscreen"}
-              whileInView={"onscreen"}
-              custom={0}
-              className="text-justify text-sm"
-            >
-              <span className="font-bold">{"Construction Services: "}</span>
-              {
-                "From residential to commercial projects, we offer comprehensive construction solutions tailored to your requirements, ensuring durability and perfection."
-              }
-            </motion.li>
-
-            <motion.li
-              variants={animateFadeUp}
-              initial={"offscreen"}
-              whileInView={"onscreen"}
-              custom={0}
-              className="text-justify text-sm"
-            >
-              <span className="font-bold">{"Interior Design:  "}</span>
-              {
-                "We craft interiors that embody your personality and enhance functionality, blending aesthetics with practicality."
-              }
-            </motion.li>
-
-            <motion.li
-              variants={animateFadeUp}
-              initial={"offscreen"}
-              whileInView={"onscreen"}
-              custom={0}
-              className="text-justify text-sm"
-            >
-              <span className="font-bold">{"Decoration & Styling:  "}</span>
-              {
-                "From residential to commercial projects, we offer comprehensive construction solutions tailored to your requirements, ensuring durability and perfection."
-              }
-            </motion.li>
-
-            <motion.li
-              variants={animateFadeUp}
-              initial={"offscreen"}
-              whileInView={"onscreen"}
-              custom={0}
-              className="text-justify text-sm"
-            >
-              <span className="font-bold">{"Construction Services: "}</span>
-              {
-                "From residential to commercial projects, we offer comprehensive construction solutions tailored to your requirements, ensuring durability and perfection."
-              }
-            </motion.li>
-
-            <motion.li
-              variants={animateFadeUp}
-              initial={"offscreen"}
-              whileInView={"onscreen"}
-              custom={0}
-              className="text-justify text-sm"
-            >
-              <span className="font-bold">{"Decoration & Styling:  "}</span>
-              {
-                "From residential to commercial projects, we offer comprehensive construction solutions tailored to your requirements, ensuring durability and perfection."
-              }
-            </motion.li>
-          </ul>
+          <motion.p
+                    viewport={{once: true}}
+            variants={animateFadeUp}
+            initial={"offscreen"}
+            whileInView={"onscreen"}
+            custom={0}
+            className="text-justify text-sm"
+          >
+            {
+              `At Acegeld, we deliver exceptional solutions in construction, 
+              finishing and furnishing. We create spaces that are structurally sound, 
+              visually stunning and tailored to our clients’ needs. 
+              From concept to completion, we ensure every project meets the highest 
+              standards of quality, safety and innovation. With a steadfast commitment to 
+              delivering on time and on schedule, we build homes, design work spaces and 
+              craft infrastructure that inspire and endure. At Acegeld we turn vision to 
+              reality.`
+            }
+          </motion.p>
         </div>
+
 
         <div className="w-full flex flex-col gap-y-3">
           <div className="flex ">
             {"Why Choose Us".split("").map((char, index) => (
               <motion.p
+                    viewport={{once: true}}
                 key={`Welcome to${index}`}
                 variants={animateGradualSpacing}
                 initial={"offscreen"}
@@ -203,34 +195,51 @@ export const InfoComponent = () => {
             ))}
           </div>
 
+
+          <motion.p
+                    viewport={{once: true}}
+            variants={animateFadeUp}
+            initial={"offscreen"}
+            whileInView={"onscreen"}
+            custom={0}
+            className="text-justify text-sm"
+          >
+            {
+              `At Acegeld, we pride ourselves on delivering excellence in every aspect of construction, finishing, and furnishing. Here’s why clients trust us to bring their visions to life:`
+            }
+          </motion.p>
+
           <ul className="flex flex-col gap-y-3">
             <motion.li
+                    viewport={{once: true}}
               variants={animateFadeUp}
               initial={"offscreen"}
               whileInView={"onscreen"}
               custom={0}
               className="text-justify text-sm"
             >
-              <span className="font-bold">{"Customized Solutions: "}</span>
+              <span className="font-bold">{"1. Expertise You Can Count On: "}</span>
               {
-                "Every project is uniquely designed to align with your vision and lifestyle."
+                "With years of experience, our team of skilled professionals ensures precision and quality in every project. From groundbreaking construction to the finest finishing touches, we excel in creating spaces that inspire."
               }
             </motion.li>
 
             <motion.li
+                    viewport={{once: true}}
               variants={animateFadeUp}
               initial={"offscreen"}
               whileInView={"onscreen"}
               custom={0}
               className="text-justify text-sm"
             >
-              <span className="font-bold">{"Quality Assurance: "}</span>
+              <span className="font-bold">{"2. Tailored Solutions: "}</span>
               {
-                "We use premium materials and advanced techniques to ensure lasting value."
+                "We understand that every project is unique. That’s why we offer personalized services, ensuring your space reflects your style, needs, and budget."
               }
             </motion.li>
 
             <motion.li
+                    viewport={{once: true}}
               variants={animateFadeUp}
               initial={"offscreen"}
               whileInView={"onscreen"}
@@ -244,28 +253,87 @@ export const InfoComponent = () => {
             </motion.li>
 
             <motion.li
+                    viewport={{once: true}}
               variants={animateFadeUp}
               initial={"offscreen"}
               whileInView={"onscreen"}
               custom={0}
               className="text-justify text-sm"
             >
-              <span className="font-bold">{"Sustainability Focus: "}</span>
-              {"We prioritize eco-friendly practices to create greener spaces."}
+              <span className="font-bold">{"3. End-to-End Services: "}</span>
+              {"Acegeld is your one-stop solution. Whether you need construction, interior finishing, or custom furnishing, we manage everything from concept to completion seamlessly.."}
             </motion.li>
 
             <motion.li
+                    viewport={{once: true}}
               variants={animateFadeUp}
               initial={"offscreen"}
               whileInView={"onscreen"}
               custom={0}
               className="text-justify text-sm"
             >
-              <span className="font-bold">{"Decoration & Styling:  "}</span>
+              <span className="font-bold">{"4. Commitment to Quality: "}</span>
               {
-                "From residential to commercial projects, we offer comprehensive construction solutions tailored to your requirements, ensuring durability and perfection."
+                "We use only the highest quality materials and industry-best practices to deliver results that stand the test of time. Your satisfaction is our top priority."
               }
             </motion.li>
+
+            <motion.li
+                    viewport={{once: true}}
+              variants={animateFadeUp}
+              initial={"offscreen"}
+              whileInView={"onscreen"}
+              custom={0}
+              className="text-justify text-sm"
+            >
+              <span className="font-bold">{"5. Timely Delivery: "}</span>
+              {
+                "We respect your time and work efficiently to meet deadlines without compromising on quality."
+              }
+            </motion.li>
+
+            <motion.li
+                    viewport={{once: true}}
+              variants={animateFadeUp}
+              initial={"offscreen"}
+              whileInView={"onscreen"}
+              custom={0}
+              className="text-justify text-sm"
+            >
+              <span className="font-bold">{"6. Transparent Pricing: "}</span>
+              {
+                "No hidden fees, no surprises—just clear and competitive pricing. We provide detailed cost breakdowns to help you plan with confidence."
+              }
+            </motion.li>
+
+            <motion.li
+                    viewport={{once: true}}
+              variants={animateFadeUp}
+              initial={"offscreen"}
+              whileInView={"onscreen"}
+              custom={0}
+              className="text-justify text-sm"
+            >
+              <span className="font-bold">{"7. Eco-Friendly Practices: "}</span>
+              {
+                "We care about the environment and strive to incorporate sustainable materials and practices in our projects whenever possible."
+              }
+            </motion.li>
+
+            <motion.li
+                    viewport={{once: true}}
+              variants={animateFadeUp}
+              initial={"offscreen"}
+              whileInView={"onscreen"}
+              custom={0}
+              className="text-justify text-sm"
+            >
+              <span className="font-bold">{"8. Outstanding Customer Support: "}</span>
+              {
+                "Our team is always ready to assist you, from the initial consultation to post-project follow-ups. Your peace of mind is important to us."
+              }
+            </motion.li>
+
           </ul>
         </div>
       </div>
@@ -277,6 +345,7 @@ export const InfoComponent = () => {
         {divCounterView && (
           <>
             <motion.div
+                    viewport={{once: true}}
               variants={animateFromRight}
               initial={"offscreen"}
               whileInView={"onscreen"}
@@ -300,6 +369,7 @@ export const InfoComponent = () => {
             </motion.div>
 
             <motion.div
+                    viewport={{once: true}}
               variants={animateFromRight}
               initial={"offscreen"}
               whileInView={"onscreen"}
@@ -323,6 +393,7 @@ export const InfoComponent = () => {
             </motion.div>
 
             <motion.div
+                    viewport={{once: true}}
               variants={animateFromRight}
               initial={"offscreen"}
               whileInView={"onscreen"}
@@ -346,6 +417,7 @@ export const InfoComponent = () => {
             </motion.div>
 
             <motion.div
+                    viewport={{once: true}}
               variants={animateFromRight}
               initial={"offscreen"}
               whileInView={"onscreen"}
@@ -371,19 +443,44 @@ export const InfoComponent = () => {
         )}
       </div>
 
-      <div className="lg:w-[30%] md:w-[50%] w-full flex flex-col gap-y-2 ">
+      <div className="lg:w-[40%] md:w-[50%] w-full flex flex-col gap-y-2 ">
+
+      <motion.p
+                    viewport={{once: true}}
+          variants={animateFadeUp}
+          initial={"offscreen"}
+          whileInView={"onscreen"}
+          custom={0}
+          className="text-sm"
+        >
+          {`Transform Your Space with Acegeld.`}
+        </motion.p>
+
+
         <motion.p
+                    viewport={{once: true}}
+          variants={animateFadeUp}
+          initial={"offscreen"}
+          whileInView={"onscreen"}
+          custom={0}
+          className="text-sm"
+        >
+          {`Let us turn your vision into reality. Partner with us for innovative designs, flawless finishes, and impeccable furnishing services.`}
+        </motion.p>
+
+        <motion.p
+                    viewport={{once: true}}
           variants={animateFadeUp}
           initial={"offscreen"}
           whileInView={"onscreen"}
           custom={0}
           className="font-bold"
         >
-          {`At Acegeld your dream space is our canvas. Let us build, design, and style a space you'll love. Contact us today to get started!`}
+          {`Ready to start? Contact us today to discuss your project!`}
         </motion.p>
 
         <motion.div
-          viewport={{ amount: 0.4 }}
+          viewport={{ amount: 0.4, once: true }}
           variants={animateFadeUp}
           initial={"offscreen"}
           whileInView={"onscreen"}

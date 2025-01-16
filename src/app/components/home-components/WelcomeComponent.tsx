@@ -53,7 +53,7 @@ export const WelcomeComponent = () => {
                             whileInView={"onscreen"}
                             className={`md:text-8xl text-5xl tracking-widest`}>
 
-                            {"Ace-Geld"}
+                            {"AceGeld"}
                         </motion.h1>
                     </div>
 
@@ -65,7 +65,7 @@ export const WelcomeComponent = () => {
                         className='lg:h-[30px] h-[60px] flex md:justify-start justify-center lg:w-auto px-2 sm:w-[50%] w-[90%] mx-auto tracking-wider text-center text-shadow text-white md:text-lg text-sm italic'>
 
                         <TypeIt options={{ loop: true, speed: 100 }}>
-                            {"Your Dream Home Awaits – Find, Buy, and Invest with Confidence!"}
+                            {"Building dreams, Perfecting Spaces & Elevating Living"}
                         </TypeIt>
                     </motion.p>
 

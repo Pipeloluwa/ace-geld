@@ -5,7 +5,7 @@ import { Button } from "@material-tailwind/react";
 import Link from "next/link";
 import React, { LegacyRef, useRef } from "react";
 import CountUp from "react-countup";
-import { useCountUp } from "react-countup";
+// import { useCountUp } from "react-countup";
 import { BsHouses } from "react-icons/bs";
 import { FaArrowRight } from "react-icons/fa";
 import { GrProjects } from "react-icons/gr";
@@ -22,16 +22,17 @@ import {
 
 export const AboutComponent = () => {
   const divCountRef: LegacyRef<HTMLDivElement> = useRef(null);
-  const divCountView = useInView(divCountRef);
+  const divCountView = useInView(divCountRef, {once: true});
 
   const aboutContent =
-    "Welcome to Acegeld where innovation meets craftsmanship. We are a leading construction, design, and interior decoration company dedicated to transforming spaces into functional and aesthetic masterpieces. With a passion for excellence and an eye for detail, we bring your vision to life with precision and creativity.";
+    "Welcome to Acegeld, a premier service-oriented company renowned for her expertise in construction, high-quality finishes and top-tier furnishing solutions. Known for delivering excellence and innovation, we tailor our services to meet diverse needs of clients both locally and internationally.";
 
   return (
     <div className="2xl:w-[1200px] xl:w-[75%] lg:w-[85%] w-[90%] mx-auto flex flex-col justify-center items-center gap-y-10">
       <div className="flex gap-x-1">
         {"You  are  welcome  aboard".split("").map((char, index) => (
           <motion.p
+                    viewport={{once: true}}
             key={`Welcome to${index}`}
             variants={animateGradualSpacing}
             initial={"offscreen"}
@@ -47,6 +48,7 @@ export const AboutComponent = () => {
 
       <div className="w-full flex lg:flex-row flex-col lg:justify-between lg:gap-x-6 lg:gap-y-0 gap-y-6 ">
         <motion.div
+                    viewport={{once: true}}
           variants={animateBlurIn}
           initial={"offscreen"}
           whileInView={"onscreen"}
@@ -61,6 +63,7 @@ export const AboutComponent = () => {
 
         <div className="lg:w-[50%] lg:mt-0 mt-12 w-full px-[10px] h-full flex flex-col gap-y-3">
           <motion.h2
+            viewport={{once: true}}
             variants={animateFadeDown}
             initial={"offscreen"}
             whileInView={"onscreen"}
@@ -71,6 +74,7 @@ export const AboutComponent = () => {
           </motion.h2>
 
           <motion.div
+                    viewport={{once: true}}
             variants={animateFadeUp}
             initial={"offscreen"}
             whileInView={"onscreen"}
@@ -98,6 +102,7 @@ export const AboutComponent = () => {
             {divCountView && (
               <>
                 <motion.div
+                    viewport={{once: true}}
                   variants={animateRotateFromRight}
                   initial={"offscreen"}
                   animate={divCountView ? "onscreen" : ""}
@@ -123,6 +128,7 @@ export const AboutComponent = () => {
                 </motion.div>
 
                 <motion.div
+                    viewport={{once: true}}
                   variants={animateRotateFromRight}
                   initial={"offscreen"}
                   animate={divCountView ? "onscreen" : ""}
@@ -148,6 +154,7 @@ export const AboutComponent = () => {
                 </motion.div>
 
                 <motion.div
+                    viewport={{once: true}}
                   variants={animateRotateFromRight}
                   initial={"offscreen"}
                   animate={divCountView ? "onscreen" : ""}
@@ -173,6 +180,7 @@ export const AboutComponent = () => {
                 </motion.div>
 
                 <motion.div
+                    viewport={{once: true}}
                   variants={animateRotateFromRight}
                   initial={"offscreen"}
                   animate={divCountView ? "onscreen" : ""}
@@ -201,6 +209,7 @@ export const AboutComponent = () => {
           </div>
 
           <motion.div
+                    viewport={{once: true}}
             variants={animateFadeUp}
             initial={"offscreen"}
             whileInView={"onscreen"}

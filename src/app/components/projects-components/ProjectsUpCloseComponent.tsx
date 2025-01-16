@@ -7,10 +7,11 @@ export const ProjectsUpCloseComponent: React.FC<IProjectUpClose> = ({ picture })
     return (
         <div className='2xl:w-[75%] w-[90%] mx-auto flex flex-col justify-center gap-y-10'>
 
-            <div className='flex'>
+            <div className='flex flex-wrap'>
                 {
-                    "The project up close".split("").map((char, index) =>
+                    "Project up close".split("").map((char, index) =>
                         <motion.p
+                    viewport={{once: true}}
                             key={`Welcome to${index}`}
                             variants={animateGradualSpacing}
                             initial={"offscreen"}
@@ -32,6 +33,7 @@ export const ProjectsUpCloseComponent: React.FC<IProjectUpClose> = ({ picture })
                 {
                     picture.map((item, index) =>
                         <motion.div
+                    viewport={{once: true}}
                             key={`projectUpClose${index}`}
                             variants={animateFadeUp}
                             initial={"offscreen"}

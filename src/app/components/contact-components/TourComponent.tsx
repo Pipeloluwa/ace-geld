@@ -9,7 +9,7 @@ import { MailResponseComponent } from '../shared-components/MailResponseComponen
 
 export const TourComponent = () => {
   const divBookTourRef: LegacyRef<HTMLDivElement> = useRef(null);
-  const divBookTourView = useInView(divBookTourRef);
+  const divBookTourView = useInView(divBookTourRef, {once: true});
 
 
   const form: LegacyRef<HTMLFormElement> = useRef(null);
@@ -64,6 +64,7 @@ export const TourComponent = () => {
               {
                 "Book A Tour".split("").map((char, index) =>
                   <motion.p
+                    viewport={{once: true}}
                     key={`Welcome to${index}`}
                     variants={animateGradualSpacing}
                     initial={"offscreen"}
@@ -81,6 +82,7 @@ export const TourComponent = () => {
 
 
             <motion.p
+                    viewport={{once: true}}
               variants={animateFadeUp}
               initial={"offscreen"}
               whileInView={"onscreen"}
@@ -97,6 +99,7 @@ export const TourComponent = () => {
               <input name='message_type' defaultValue={"Tour"} className='hidden' />
 
               <motion.div
+                viewport={{once: true}}
                 variants={animateFadeUp}
                 initial={"offscreen"}
                 whileInView={"onscreen"}
@@ -112,6 +115,7 @@ export const TourComponent = () => {
 
 
               <motion.div
+                viewport={{once: true}}
                 variants={animateFadeUp}
                 initial={"offscreen"}
                 whileInView={"onscreen"}
@@ -127,6 +131,7 @@ export const TourComponent = () => {
 
 
               <motion.div
+                viewport={{once: true}}
                 variants={animateFadeUp}
                 initial={"offscreen"}
                 whileInView={"onscreen"}
@@ -143,6 +148,7 @@ export const TourComponent = () => {
 
 
               <motion.div
+                viewport={{once: true}}
                 variants={animateFadeUp}
                 initial={"offscreen"}
                 whileInView={"onscreen"}
@@ -158,6 +164,7 @@ export const TourComponent = () => {
 
 
               <motion.div
+                viewport={{once: true}}
                 variants={animateFadeUp}
                 initial={"offscreen"}
                 whileInView={"onscreen"}
@@ -192,7 +199,7 @@ export const TourComponent = () => {
 
 
           <motion.div
-            viewport={{ amount: 0.4 }}
+            viewport={{ amount: 0.4, once: true }}
             variants={animateBlurIn}
             initial={"offscreen"}
             whileInView={"onscreen"}

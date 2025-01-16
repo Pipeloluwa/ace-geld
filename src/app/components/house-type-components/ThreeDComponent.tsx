@@ -14,10 +14,11 @@ export const ThreeDComponent: React.FC<IThreeD> = ({ link_3d }) => {
         <div className='w-full flex flex-col justify-center mt-10 gap-y-10'>
 
 
-            <div className='flex'>
+            <div className='flex flex-wrap'>
                 {
                     "The house in 3D".split("").map((char, index) =>
                         <motion.p
+                    viewport={{once: true}}
                             key={`Welcome to${index}`}
                             variants={animateGradualSpacing}
                             initial={"offscreen"}
@@ -35,6 +36,7 @@ export const ThreeDComponent: React.FC<IThreeD> = ({ link_3d }) => {
 
 
             <motion.div
+                    viewport={{once: true}}
                 variants={animateBlurIn}
                 initial={"offscreen"}
                 whileInView={"onscreen"}

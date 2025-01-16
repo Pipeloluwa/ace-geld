@@ -250,7 +250,7 @@ export const FooterComponent = () => {
                                     custom={0}
                                 >
                                     <h6>
-                                        {"+234 28978042 239"}
+                                        {"+234 807 133 3456"}
                                     </h6>
                                 </motion.div>
 
@@ -262,7 +262,7 @@ export const FooterComponent = () => {
                                     custom={0.2}
                                 >
                                     <h6>
-                                        {"+234 28978042 239"}
+                                        {"+234 809 399 0219"}
                                     </h6>
                                 </motion.div>
 
@@ -289,7 +289,7 @@ export const FooterComponent = () => {
                                     custom={0.2}
                                 >
                                     <Link rel='no' href={"mailto:"}>
-                                        {"email@email.com"}
+                                        {"info@acegeld.com"}
                                     </Link>
                                 </motion.div>
 
@@ -450,7 +450,7 @@ export const FooterComponent = () => {
 
 
                 <div className='w-full flex mt-8  gap-x-6 justify-center text-black'>
-                    <motion.div
+                    {/* <motion.div
                         variants={animateFadeUp}
                         initial={"offscreen"}
                         whileInView={"onscreen"}
@@ -459,7 +459,7 @@ export const FooterComponent = () => {
                         <Link href={""} target="_blank" rel="noopener noreferrer">
                             <FaFacebook className='size-[25px]' />
                         </Link>
-                    </motion.div>
+                    </motion.div> */}
 
 
                     <motion.div
@@ -468,7 +468,7 @@ export const FooterComponent = () => {
                         whileInView={"onscreen"}
                         custom={0.1}
                     >
-                        <Link href={""} target="_blank" rel="noopener noreferrer">
+                        <Link href={"https://www.instagram.com/acegeld_ng/profilecard/?igsh=MTZuNDJ0eGp1c21kaQ=="} target="_blank" rel="noopener noreferrer">
                             <RiInstagramFill className='size-[25px]' />
                         </Link>
                     </motion.div>
@@ -480,13 +480,13 @@ export const FooterComponent = () => {
                         whileInView={"onscreen"}
                         custom={0.2}
                     >
-                        <Link href={""} target="_blank" rel="noopener noreferrer">
+                        <Link href={"https://x.com/acegeld_ng?s=21"} target="_blank" rel="noopener noreferrer">
                             <BsTwitterX className='size-[25px]' />
                         </Link>
                     </motion.div>
 
 
-                    <motion.div
+                    {/* <motion.div
                         variants={animateFadeUp}
                         initial={"offscreen"}
                         whileInView={"onscreen"}
@@ -495,7 +495,7 @@ export const FooterComponent = () => {
                         <Link href={""} target="_blank" rel="noopener noreferrer">
                             <IoLogoYoutube className='size-[25px]' />
                         </Link>
-                    </motion.div>
+                    </motion.div> */}
 
 
                     <motion.div
@@ -504,7 +504,7 @@ export const FooterComponent = () => {
                         whileInView={"onscreen"}
                         custom={0.4}
                     >
-                        <Link href={""} target="_blank" rel="noopener noreferrer">
+                        <Link href={"https://www.linkedin.com/company/acegeld/"} target="_blank" rel="noopener noreferrer">
                             <FaLinkedin className='size-[25px]' />
                         </Link>
                     </motion.div>

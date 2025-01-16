@@ -21,9 +21,9 @@ const VideoComponent: React.FC<IVideoComponent> = ({ setVideoLoadState }) => {
     return (
         <motion.video
             ref={videoRef}
+            viewport={{once: true}}
             onCanPlay={() => {videoRef.current?.play(); setTimeout(() => setVideoLoadState(true), 1000)}}
             autoPlay muted loop playsInline
-            viewport={{ once: true }}
             variants={animateBlurIn}
             initial={"offscreen"}
             whileInView={"onscreen"}

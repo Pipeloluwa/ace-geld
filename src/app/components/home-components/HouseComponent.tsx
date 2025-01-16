@@ -51,6 +51,7 @@ export const HouseComponent = () => {
 
             <div className='2xl:w-[1200px] xl:w-[75%] lg:w-[85%] w-[90%] mx-auto flex flex-col gap-y-3'>
                 <motion.h2
+                    viewport={{once: true}}
                     variants={animateFadeDown}
                     initial={"offscreen"}
                     whileInView={"onscreen"}
@@ -62,6 +63,7 @@ export const HouseComponent = () => {
                 </motion.h2>
 
                 <motion.p
+                    viewport={{once: true}}
                     variants={animateFadeUp}
                     initial={"offscreen"}
                     whileInView={"onscreen"}
@@ -110,6 +112,7 @@ export const HouseComponent = () => {
 
                                             <div className='relative overflow-hidden lg:h-[550px] sm:h-[500px] h-[400px] w-[90%] mx-auto flex items-center rounded-3xl shadow-md drop-shadow-lg shadow-gray-800'>
                                                 <motion.div
+                    viewport={{once: true}}
                                                     variants={animateFromLeft}
                                                     initial={"offscreen"}
                                                     whileInView={"onscreen"}
@@ -124,10 +127,12 @@ export const HouseComponent = () => {
 
                                                 <div className='h-[250px] absolute bottom-0 left-0 right-0 flex flex-col justify-end items-center gap-y-2 p-4 from-transparent to-black bg-gradient-to-b'>
 
-                                                    <motion.h5 className='font-bold text-white tracking-widest'>
+                                                    <motion.h5
+                    viewport={{once: true}} className='font-bold text-white tracking-widest'>
                                                         {
                                                             item.title.split("").map((char, index) =>
                                                                 <motion.span
+                    viewport={{once: true}}
                                                                     key={`homeHouseTitle${index}`}
                                                                     variants={animatePullUp}
                                                                     initial={"offscreen"}
@@ -141,6 +146,7 @@ export const HouseComponent = () => {
                                                     </motion.h5>
 
                                                     <motion.p
+                    viewport={{once: true}}
                                                         variants={animateFadeUp}
                                                         initial={"offscreen"}
                                                         whileInView={"onscreen"}
@@ -151,6 +157,7 @@ export const HouseComponent = () => {
                                                     </motion.p>
 
                                                     <motion.div
+                    viewport={{once: true}}
                                                         variants={animateVisible}
                                                         initial={"offscreen"}
                                                         whileInView={"onscreen"}
@@ -202,6 +209,7 @@ export const HouseComponent = () => {
 
 
                 <motion.div
+                    viewport={{once: true}}
                     variants={animateFadeUp}
                     initial={"offscreen"}
                     whileInView={"onscreen"}

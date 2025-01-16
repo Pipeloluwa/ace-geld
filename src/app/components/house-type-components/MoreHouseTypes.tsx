@@ -42,10 +42,11 @@ export const MoreHouseTypes: React.FC<{ title: string }> = ({ title }) => {
     return (
         <div className='md:h-[700px] sm:-[600px] h-[500px] flex flex-col justify-center gap-y-10'>
 
-            <div className='2xl:w-[75%] w-[90%] mx-auto flex'>
+            <div className='2xl:w-[75%] w-[90%] mx-auto flex flex-wrap'>
                 {
                     "More House Types".split("").map((char, index) =>
                         <motion.p
+                    viewport={{once: true}}
                             key={`Welcome to${index}`}
                             variants={animateGradualSpacing}
                             initial={"offscreen"}
@@ -64,6 +65,7 @@ export const MoreHouseTypes: React.FC<{ title: string }> = ({ title }) => {
 
 
             <motion.div
+                    viewport={{once: true}}
                 variants={animateFadeUp}
                 initial={"offscreen"}
                 whileInView={"onscreen"}
@@ -117,6 +119,7 @@ export const MoreHouseTypes: React.FC<{ title: string }> = ({ title }) => {
                                                         {
                                                             key.split("").map((char, index) =>
                                                                 <motion.p
+                    viewport={{once: true}}
                                                                     key={`Welcome to${index}`}
                                                                     variants={animateGradualSpacing}
                                                                     initial={"offscreen"}
@@ -135,6 +138,7 @@ export const MoreHouseTypes: React.FC<{ title: string }> = ({ title }) => {
 
 
                                                     <motion.p
+                    viewport={{once: true}}
                                                         variants={animateFadeUp}
                                                         initial={"offscreen"}
                                                         whileInView={"onscreen"}
@@ -146,6 +150,7 @@ export const MoreHouseTypes: React.FC<{ title: string }> = ({ title }) => {
                                                     </motion.p>
 
                                                     <motion.div
+                    viewport={{once: true}}
                                                         variants={animateBlurIn}
                                                         initial={"offscreen"}
                                                         whileInView={"onscreen"}

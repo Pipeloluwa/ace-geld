@@ -7,10 +7,10 @@ import React, { LegacyRef, useRef } from 'react'
 
 export const PolicyTermsComponent: React.FC<IPolicyTermsComponent> = ({ description, data }) => {
     const divDescRef:LegacyRef<HTMLDivElement>= useRef(null);
-    const divDescView= useInView(divDescRef);
+    const divDescView= useInView(divDescRef, {once: true});
 
     const ulPolicy:LegacyRef<HTMLUListElement>= useRef(null);
-    const ulPolicyView= useInView(ulPolicy);
+    // const ulPolicyView= useInView(ulPolicy, {once: true});
 
     
     return (
@@ -20,7 +20,8 @@ export const PolicyTermsComponent: React.FC<IPolicyTermsComponent> = ({ descript
                 description
                 &&
 
-                <motion.p 
+                <motion.p
+                    viewport={{once: true}} 
                     variants={animateFadeUp}
                     initial={"offscreen"}
                     animate={divDescView ? "onscreen" : ""}
@@ -39,7 +40,7 @@ export const PolicyTermsComponent: React.FC<IPolicyTermsComponent> = ({ descript
                     data.map((item, index) =>
                         <li key={`policyTermsData${index}`} className='flex flex-col'>
                             <motion.h3 
-                                viewport={{amount: 0.2}}
+                                viewport={{amount: 0.2, once: true}}
                                 variants={animateFadeUp}
                                 initial={"offscreen"}
                                 whileInView={"onscreen"}
@@ -50,7 +51,8 @@ export const PolicyTermsComponent: React.FC<IPolicyTermsComponent> = ({ descript
                                 {`${index + 1})  ${item.title}`}
                             </motion.h3>
 
-                            <motion.p 
+                            <motion.p
+                    viewport={{once: true}} 
                                 variants={animateFadeUp}
                                 initial={"offscreen"}
                                 whileInView={"onscreen"}

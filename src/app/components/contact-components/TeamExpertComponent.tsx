@@ -18,6 +18,7 @@ export const TeamExpertComponent = () => {
           {
             "Contact Us".split("").map((char, index) =>
               <motion.p
+                    viewport={{once: true}}
                 key={`Welcome to${index}`}
                 variants={animateGradualSpacing}
                 initial={"offscreen"}
@@ -35,6 +36,7 @@ export const TeamExpertComponent = () => {
 
 
         <motion.p
+                    viewport={{once: true}}
           variants={animateFadeUp}
           initial={"offscreen"}
           whileInView={"onscreen"}
@@ -50,12 +52,13 @@ export const TeamExpertComponent = () => {
 
 
 
-      <div className='h-full grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-y-8'>
+      <div className='h-full grid lg:grid-cols-2 grid-cols-1 gap-8'>
         {
           teamExpertData.map((item, index) =>
             <div key={`teamExperData${index}`} className='flex items-center gap-x-5'>
 
               <motion.div
+                    viewport={{once: true}}
                 variants={animateBlurIn}
                 initial={"offscreen"}
                 whileInView={"onscreen"}
@@ -70,10 +73,11 @@ export const TeamExpertComponent = () => {
 
               <div className='flex flex-col'>
 
-                <div className='flex '>
+                <div className='flex flex-wrap'>
                   {
                     item.name.split("").map((char, index) =>
                       <motion.p
+                    viewport={{once: true}}
                         key={`Welcome to${index}`}
                         variants={animateGradualSpacing}
                         initial={"offscreen"}
@@ -81,7 +85,7 @@ export const TeamExpertComponent = () => {
                         custom={index}
 
                         style={{ whiteSpace: "pre-wrap" }}
-                        className='text-xl font-bold '>
+                        className='font-bold '>
 
                         {char}
                       </motion.p>
@@ -90,6 +94,7 @@ export const TeamExpertComponent = () => {
                 </div>
 
                 <motion.h4
+                    viewport={{once: true}}
                   variants={animateFadeUp}
                   initial={"offscreen"}
                   whileInView={"onscreen"}
@@ -103,6 +108,7 @@ export const TeamExpertComponent = () => {
 
 
                 <motion.div
+                    viewport={{once: true}}
                   variants={animateFadeUp}
                   initial={"offscreen"}
                   whileInView={"onscreen"}

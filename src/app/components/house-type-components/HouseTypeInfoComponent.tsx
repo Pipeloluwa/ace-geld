@@ -21,10 +21,11 @@ export const HouseTypeInfoComponent: React.FC<IHouseTypeInfo> = (props) => {
 
                     <div className=' flex flex-col gap-y-3'>
 
-                        <div className='flex'>
+                        <div className='flex flex-wrap'>
                             {
                                 props.title.split("").map((char, index) =>
                                     <motion.p
+                    viewport={{once: true}}
                                         key={`Welcome to${index}`}
                                         variants={animateGradualSpacing}
                                         initial={"offscreen"}
@@ -41,6 +42,7 @@ export const HouseTypeInfoComponent: React.FC<IHouseTypeInfo> = (props) => {
                         </div>
 
                         <motion.p
+                    viewport={{once: true}}
                             variants={animateFadeUp}
                             initial={"offscreen"}
                             whileInView={"onscreen"}
@@ -64,6 +66,7 @@ export const HouseTypeInfoComponent: React.FC<IHouseTypeInfo> = (props) => {
                         <div className='flex gap-x-3 font-bold'>
 
                             <motion.div
+                    viewport={{once: true}}
                                 variants={animateFromLeft}
                                 initial={"offscreen"}
                                 whileInView={"onscreen"}
@@ -76,6 +79,7 @@ export const HouseTypeInfoComponent: React.FC<IHouseTypeInfo> = (props) => {
                             <div className='flex flex-col'>
 
                                 <motion.div
+                    viewport={{once: true}}
                                     variants={animateFromRight}
                                     initial={"offscreen"}
                                     whileInView={"onscreen"}
@@ -90,6 +94,7 @@ export const HouseTypeInfoComponent: React.FC<IHouseTypeInfo> = (props) => {
 
 
                                 <motion.h3
+                    viewport={{once: true}}
                                     variants={animateFadeUp}
                                     initial={"offscreen"}
                                     whileInView={"onscreen"}
@@ -107,6 +112,7 @@ export const HouseTypeInfoComponent: React.FC<IHouseTypeInfo> = (props) => {
                         <div className='flex gap-x-3 font-bold'>
 
                             <motion.div
+                    viewport={{once: true}}
                                 variants={animateFromLeft}
                                 initial={"offscreen"}
                                 whileInView={"onscreen"}
@@ -119,6 +125,7 @@ export const HouseTypeInfoComponent: React.FC<IHouseTypeInfo> = (props) => {
                             <div className='flex flex-col'>
 
                                 <motion.div
+                    viewport={{once: true}}
                                     variants={animateFromRight}
                                     initial={"offscreen"}
                                     whileInView={"onscreen"}
@@ -133,6 +140,7 @@ export const HouseTypeInfoComponent: React.FC<IHouseTypeInfo> = (props) => {
 
 
                                 <motion.h3
+                    viewport={{once: true}}
                                     variants={animateFadeUp}
                                     initial={"offscreen"}
                                     whileInView={"onscreen"}
@@ -148,6 +156,7 @@ export const HouseTypeInfoComponent: React.FC<IHouseTypeInfo> = (props) => {
                         <div className='flex gap-x-3 font-bold'>
 
                             <motion.div
+                    viewport={{once: true}}
                                 variants={animateFromLeft}
                                 initial={"offscreen"}
                                 whileInView={"onscreen"}
@@ -161,6 +170,7 @@ export const HouseTypeInfoComponent: React.FC<IHouseTypeInfo> = (props) => {
 
                             <div className='flex flex-col'>
                                 <motion.div
+                    viewport={{once: true}}
                                     variants={animateFromRight}
                                     initial={"offscreen"}
                                     whileInView={"onscreen"}
@@ -174,6 +184,7 @@ export const HouseTypeInfoComponent: React.FC<IHouseTypeInfo> = (props) => {
                                 </motion.div>
 
                                 <motion.h3
+                    viewport={{once: true}}
                                     variants={animateFadeUp}
                                     initial={"offscreen"}
                                     whileInView={"onscreen"}
@@ -189,6 +200,7 @@ export const HouseTypeInfoComponent: React.FC<IHouseTypeInfo> = (props) => {
                         <div className='flex gap-x-3 font-bold'>
 
                             <motion.div
+                    viewport={{once: true}}
                                 variants={animateFromLeft}
                                 initial={"offscreen"}
                                 whileInView={"onscreen"}
@@ -200,6 +212,7 @@ export const HouseTypeInfoComponent: React.FC<IHouseTypeInfo> = (props) => {
 
                             <div className='flex flex-col'>
                                 <motion.div
+                    viewport={{once: true}}
                                     variants={animateFromRight}
                                     initial={"offscreen"}
                                     whileInView={"onscreen"}
@@ -213,6 +226,7 @@ export const HouseTypeInfoComponent: React.FC<IHouseTypeInfo> = (props) => {
                                 </motion.div>
 
                                 <motion.h3
+                    viewport={{once: true}}
                                     variants={animateFadeUp}
                                     initial={"offscreen"}
                                     whileInView={"onscreen"}
@@ -227,6 +241,7 @@ export const HouseTypeInfoComponent: React.FC<IHouseTypeInfo> = (props) => {
                         <div className='flex gap-x-3 font-bold'>
 
                             <motion.div
+                    viewport={{once: true}}
                                 variants={animateFromLeft}
                                 initial={"offscreen"}
                                 whileInView={"onscreen"}
@@ -238,6 +253,7 @@ export const HouseTypeInfoComponent: React.FC<IHouseTypeInfo> = (props) => {
 
                             <div className='flex flex-col'>
                                 <motion.div
+                    viewport={{once: true}}
                                     variants={animateFromRight}
                                     initial={"offscreen"}
                                     whileInView={"onscreen"}
@@ -251,6 +267,7 @@ export const HouseTypeInfoComponent: React.FC<IHouseTypeInfo> = (props) => {
                                 </motion.div>
 
                                 <motion.h3
+                    viewport={{once: true}}
                                     variants={animateFadeUp}
                                     initial={"offscreen"}
                                     whileInView={"onscreen"}
@@ -265,6 +282,7 @@ export const HouseTypeInfoComponent: React.FC<IHouseTypeInfo> = (props) => {
                         <div className='flex gap-x-3 font-bold'>
 
                             <motion.div
+                    viewport={{once: true}}
                                 variants={animateFromLeft}
                                 initial={"offscreen"}
                                 whileInView={"onscreen"}
@@ -276,6 +294,7 @@ export const HouseTypeInfoComponent: React.FC<IHouseTypeInfo> = (props) => {
 
                             <div className='flex flex-col'>
                                 <motion.div
+                    viewport={{once: true}}
                                     variants={animateFromRight}
                                     initial={"offscreen"}
                                     whileInView={"onscreen"}
@@ -289,6 +308,7 @@ export const HouseTypeInfoComponent: React.FC<IHouseTypeInfo> = (props) => {
                                 </motion.div>
 
                                 <motion.h3
+                    viewport={{once: true}}
                                     variants={animateFadeUp}
                                     initial={"offscreen"}
                                     whileInView={"onscreen"}
@@ -308,6 +328,7 @@ export const HouseTypeInfoComponent: React.FC<IHouseTypeInfo> = (props) => {
 
 
                 <motion.div
+                    viewport={{once: true}}
                     variants={animateBlurIn}
                     initial={"offscreen"}
                     whileInView={"onscreen"}

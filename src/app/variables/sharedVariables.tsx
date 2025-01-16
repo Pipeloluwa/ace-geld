@@ -35,16 +35,25 @@ export const estateFeaturesIcon = [
 
 export const coreTeamsData = [
   {
-    name: "Victor Williams",
-    position: "Chief Executive Officer",
+    name: "Engr. Victor Williams Apokhume MIAEng, R.Eng (COREN)",
+    position: "Managing Director",
     description:
-      `Victor Williams is a highly skilled and accomplished engineer with a certification from the Council for the Regulation of Engineering in Nigeria (COREN). Renowned for his expertise in project execution and onsite operations, Victor has a proven track record of delivering innovative and efficient solutions across diverse engineering fields.  
-
-With several successful projects to his credit, he has demonstrated exceptional technical proficiency, leadership, and problem-solving skills in both challenging and dynamic environments. His commitment to excellence and attention to detail make him a reliable professional who consistently exceeds expectations.  
-
-Victor's extensive onsite experience complements his ability to seamlessly translate technical designs into practical applications, ensuring project success from conception to completion.  
-
-Passionate about engineering and continuous improvement, Victor remains dedicated to driving impactful results and contributing to the advancement of engineering standards in Nigeria and beyond.`,
+      `Engr. Victor Williams is a passionate Civil Engineer with a Bachelor of 
+      Engineering degree in Civil Engineering from Federal University of 
+      Technology Minna, Nigeria. 
+      As a certified and licensed professional, recognized by the Council for the 
+      Regulation of Engineering in Nigeria (COREN) and a proud member of the 
+      International Association of Engineers, Engr. Victor brings a wealth of 
+      experience and dedication to every project he undertakes. 
+      With a proven track record in the construction industry, Engr. Victor has 
+      made significant contributions to the successful execution of various 
+      construction projects, he prides himself on his ability to blend technical 
+      expertise with a client-centered approach ensuring that every project exceeds 
+      expectations. 
+      Now a thriving businessman in the same domain, Engr. Victor continues to 
+      push the boundaries of innovation and quality in project execution. He is a 
+      trailblazer in his field, consistently transforming vision into reality with 
+      precision, passion and unwavering commitment.`,
     picture: "images/pictures/others/Victor.jpg",
   }
 ];
@@ -52,9 +61,9 @@ Passionate about engineering and continuous improvement, Victor remains dedicate
 export const teamExpertData = [
 
     {
-    name: "Victor Williams",
-    position: "Chief Executive Officer",
-    email: "apokhumev@gmail.com",
+    name: "Engr. Victor Williams Apokhume MIAEng, R.Eng (COREN)",
+    position: "Managing Director",
+    email: "ceo@acegeld.com",
     picture: "images/pictures/others/Victor.jpg",
   },
 ];

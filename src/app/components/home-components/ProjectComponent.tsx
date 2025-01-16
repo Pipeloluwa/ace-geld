@@ -19,7 +19,7 @@ export const ProjectComponent = () => {
 
             <div className='lg:w-[70%] w-full mx-auto flex flex-col gap-y-3'>
                 <motion.h2
-                    viewport={{ amount: 0.4 }}
+                    viewport={{once: true}}
                     variants={animateFadeDown}
                     initial={"offscreen"}
                     whileInView={"onscreen"}
@@ -31,6 +31,7 @@ export const ProjectComponent = () => {
                 </motion.h2>
 
                 <motion.div
+                    viewport={{once: true}}
                     variants={animateFadeUp}
                     initial={"offscreen"}
                     whileInView={"onscreen"}
@@ -60,6 +61,7 @@ export const ProjectComponent = () => {
                     {
                         Object.entries(projectsBaseData).slice(0, 4).map(([key, item], index) =>
                             <motion.div
+                    viewport={{once: true}}
                                 key={`projectDataSample${index}`}
                                 variants={animateFadeUp}
                                 initial={"offscreen"}
@@ -73,6 +75,7 @@ export const ProjectComponent = () => {
                                     className='w-full lg:h-[600px] h-[400px] relative text-white bg-gray-300 overflow-hidden rounded-3xl shadow-lg shadow-gray-400'>
 
                                     <motion.div
+                    viewport={{once: true}}
                                         variants={animateBlurIn}
                                         initial={"offscreen"}
                                         whileInView={"onscreen"}
@@ -100,6 +103,7 @@ export const ProjectComponent = () => {
                                             {
                                                 item.title.split("").map((char, index) =>
                                                     <motion.span
+                    viewport={{once: true}}
                                                         key={`homeprojectTitle${index}`}
                                                         variants={animatePullUp}
                                                         initial={"offscreen"}
@@ -112,7 +116,8 @@ export const ProjectComponent = () => {
                                             }
                                         </h1>
 
-                                        <motion.div
+                                        {/* <motion.div
+                    viewport={{once: true}}
                                             variants={animateRotateFromLeft}
                                             initial={"offscreen"}
                                             whileInView={"onscreen"}
@@ -124,12 +129,13 @@ export const ProjectComponent = () => {
                                             <p>
                                                 {item.location}
                                             </p>
-                                        </motion.div>
+                                        </motion.div> */}
 
                                         {
                                             projectHover === `projectDataSampleId${index}`
                                             &&
                                             <motion.div
+                    viewport={{once: true}}
                                                 variants={animateFadeUp}
                                                 initial={"offscreen"}
                                                 whileInView={"onscreen"}
@@ -168,6 +174,7 @@ export const ProjectComponent = () => {
 
 
                 <motion.div
+                    viewport={{once: true}}
                     variants={animateFadeUp}
                     initial={"offscreen"}
                     whileInView={"onscreen"}

@@ -19,10 +19,11 @@ export const MoreProjects: React.FC<{ title: string }> = ({ title }) => {
         <div className='2xl:w-[75%] w-[90%] mx-auto flex flex-col justify-center gap-y-10'>
 
 
-            <div className='flex'>
+            <div className='flex flex-wrap'>
                 {
                     "More Projects".split("").map((char, index) =>
                         <motion.p
+                    viewport={{once: true}}
                             key={`Welcome to${index}`}
                             variants={animateGradualSpacing}
                             initial={"offscreen"}
@@ -45,6 +46,7 @@ export const MoreProjects: React.FC<{ title: string }> = ({ title }) => {
                         key !== title
                         &&
                         <motion.div
+                    viewport={{once: true}}
                             key={`projectDataComponentSample${index}`}
 
                             variants={index % 2 === 0 ? animateFromRight : animateFromLeft}
@@ -59,6 +61,7 @@ export const MoreProjects: React.FC<{ title: string }> = ({ title }) => {
                                 className='w-full lg:h-[600px] h-[400px] relative text-white bg-gray-300 overflow-hidden rounded-3xl shadow-lg shadow-gray-400'>
 
                                 <motion.div
+                    viewport={{once: true}}
                                     variants={animateBlurIn}
                                     initial={"offscreen"}
                                     whileInView={"onscreen"}
@@ -86,6 +89,7 @@ export const MoreProjects: React.FC<{ title: string }> = ({ title }) => {
                                         {
                                             item.title.split("").map((char, index) =>
                                                 <motion.span
+                    viewport={{once: true}}
                                                     key={`homeprojectTitle${index}`}
                                                     variants={animatePullUp}
                                                     initial={"offscreen"}
@@ -101,7 +105,8 @@ export const MoreProjects: React.FC<{ title: string }> = ({ title }) => {
                                     </h1>
 
 
-                                    <motion.div
+                                    {/* <motion.div
+                    viewport={{once: true}}
                                         variants={animateRotateFromLeft}
                                         initial={"offscreen"}
                                         whileInView={"onscreen"}
@@ -114,13 +119,14 @@ export const MoreProjects: React.FC<{ title: string }> = ({ title }) => {
                                         <p className='text-sm'>
                                             {item.location}
                                         </p>
-                                    </motion.div>
+                                    </motion.div> */}
 
                                     {
                                         projectHover === `projectDataSampleId${index}`
                                         &&
 
                                         <motion.p
+                    viewport={{once: true}}
                                             variants={animateFadeUp}
                                             initial={"offscreen"}
                                             whileInView={"onscreen"}

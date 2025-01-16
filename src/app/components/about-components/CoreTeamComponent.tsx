@@ -13,6 +13,7 @@ export const CoreTeamComponent = () => {
                     {
                         "Our Core Team".split("").map((char, index) =>
                             <motion.p
+                    viewport={{once: true}}
                                 key={`Welcome to${index}`}
                                 variants={animateGradualSpacing}
                                 initial={"offscreen"}
@@ -30,6 +31,7 @@ export const CoreTeamComponent = () => {
 
 
                 <motion.p
+                    viewport={{once: true}}
                     variants={animateFadeUp}
                     initial={"offscreen"}
                     whileInView={"onscreen"}
@@ -50,6 +52,7 @@ export const CoreTeamComponent = () => {
                         <div key={`coreTeamData${index}`} className='w-full min-h-[350px] flex lg:flex-row flex-col lg:gap-x-6 lg:gap-y-0 gap-y-10'>
 
                             <motion.div
+                    viewport={{once: true}}
                                 variants={animateBlurIn}
                                 initial={"offscreen"}
                                 whileInView={"onscreen"}
@@ -67,6 +70,7 @@ export const CoreTeamComponent = () => {
                                     {
                                         item.position.split("").map((char, index) =>
                                             <motion.p
+                    viewport={{once: true}}
                                                 key={`Core Team Position${index}`}
                                                 variants={animateGradualSpacing}
                                                 initial={"offscreen"}
@@ -83,10 +87,11 @@ export const CoreTeamComponent = () => {
                                 </div>
 
 
-                                <div className='flex '>
+                                <div className='flex flex-wrap'>
                                     {
                                         item.name.split("").map((char, index) =>
                                             <motion.p
+                    viewport={{once: true}}
                                                 key={`Core Team Name${index}`}
                                                 variants={animateGradualSpacing}
                                                 initial={"offscreen"}
@@ -103,6 +108,7 @@ export const CoreTeamComponent = () => {
                                 </div>
 
                                 <motion.p
+                    viewport={{once: true}}
                                     variants={animateFadeUp}
                                     initial={"offscreen"}
                                     whileInView={"onscreen"}
