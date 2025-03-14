@@ -8,6 +8,7 @@ import { MoreProjects } from './MoreProjects'
 import { ProjectsUpCloseComponent } from './ProjectsUpCloseComponent'
 import { ProjectsInfoComponent } from './ProjectsInfoComponent'
 import { ProjectEstateFeatureComponent } from './ProjectEstateFeatureComponent'
+import { ThreeDComponent } from '../house-type-components/ThreeDComponent'
 
 
 
@@ -30,7 +31,7 @@ export const ProjectsBaseComponent:React.FC<IProjectInfo> = (projectDataResponse
             <ProjectEstateFeatureComponent estate_features={projectDataResponse.projectData.estate_features}/>
 
             <ProjectsUpCloseComponent picture={projectDataResponse.projectData.project_up_close}/>
-
+            
             <MoreProjects title={projectDataResponse.title}/>
 
 

@@ -126,11 +126,7 @@ export const InfoComponent = () => {
             className="text-justify text-sm"
           >
             {
-              ` To be the leading service-oriented company, setting the 
-                benchmark in construction, finishing and furnishing through innovative 
-                solutions, exceptional craftsmanship and timely delivery. At Acegeld, we 
-                strive to exceed expectations, transform visions to remarkable realities and 
-                become the number one choice for quality and excellence.`
+              ` To be the leading service-oriented company of choice, exceeding client expectations with excellence and innovation. `
             }
           </motion.p>
         </div>

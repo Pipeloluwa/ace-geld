@@ -62,7 +62,7 @@ export const TourComponent = () => {
 
             <div ref={divBookTourRef} className='flex '>
               {
-                "Book A Tour".split("").map((char, index) =>
+                "Speak with us".split("").map((char, index) =>
                   <motion.p
                     viewport={{once: true}}
                     key={`Welcome to${index}`}
@@ -89,7 +89,7 @@ export const TourComponent = () => {
               custom={0}
 
               className='text-justify text-sm'>
-              {"Experience our exceptional estate features firsthand. Schedule your personalized tour now and take the first step toward your dream home."}
+              {"Experience our exceptional services firsthand and take the first step toward your dream home."}
             </motion.p>
 
 

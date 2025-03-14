@@ -21,6 +21,17 @@ import { motion } from 'motion/react'
 
 export const HouseComponent = () => {
 
+
+    const newHouseData = [
+        "/images/pictures/houses/pine-penthouse.webp",
+        "/images/pictures/projects/renovation_interior/bedroom.webp",
+        "/images/pictures/projects/renovation_interior/room.webp",
+        "/images/pictures/projects/renovation_interior/cover.webp",
+        "/images/pictures/projects/renovation_interior/IMG-20250124-WA0051.webp",
+        "/images/pictures/projects/renovation_interior/IMG-20250124-WA0043.webp",
+        "/images/pictures/projects/renovation_interior/IMG-20250206-WA0092.webp"
+    ];
+
     const sliderRef = useRef<Slider | null>(null);
 
     const [isMin960, setIsMin960] = useState(false);
@@ -51,7 +62,7 @@ export const HouseComponent = () => {
 
             <div className='2xl:w-[1200px] xl:w-[75%] lg:w-[85%] w-[90%] mx-auto flex flex-col gap-y-3'>
                 <motion.h2
-                    viewport={{once: true}}
+                    viewport={{ once: true }}
                     variants={animateFadeDown}
                     initial={"offscreen"}
                     whileInView={"onscreen"}
@@ -63,7 +74,7 @@ export const HouseComponent = () => {
                 </motion.h2>
 
                 <motion.p
-                    viewport={{once: true}}
+                    viewport={{ once: true }}
                     variants={animateFadeUp}
                     initial={"offscreen"}
                     whileInView={"onscreen"}
@@ -106,84 +117,23 @@ export const HouseComponent = () => {
                             className="w-full h-full justify-center items-center overflow-hidden rounded-3xl"
                         >
                             {
-                                Object.entries(houseTypeBaseData).slice(0, 8).map(([key, item], index) => {
+                                newHouseData.map((item, index) => {
                                     return (
                                         <div key={`housesDataSampleKey${index}`} className='overflow-hidden lg:h-[570px] sm:h-[520px] h-[420px] md:w-[350px] w-full flex justify-center items-center'>
 
                                             <div className='relative overflow-hidden lg:h-[550px] sm:h-[500px] h-[400px] w-[90%] mx-auto flex items-center rounded-3xl shadow-md drop-shadow-lg shadow-gray-800'>
                                                 <motion.div
-                    viewport={{once: true}}
+                                                    viewport={{ once: true }}
                                                     variants={animateFromLeft}
                                                     initial={"offscreen"}
                                                     whileInView={"onscreen"}
                                                     custom={0}
 
                                                     className='absolute top-0 bottom-0 left-0 right-0 flex w-full h-full object-cover bg-gray-300'>
-                                                    <img alt='project picture' src={item.picture} className='flex w-full h-full object-cover' />
+                                                    <img alt='project picture' src={item} className='flex w-full h-full object-cover' />
 
                                                 </motion.div>
 
-
-
-                                                <div className='h-[250px] absolute bottom-0 left-0 right-0 flex flex-col justify-end items-center gap-y-2 p-4 from-transparent to-black bg-gradient-to-b'>
-
-                                                    <motion.h5
-                    viewport={{once: true}} className='font-bold text-white tracking-widest'>
-                                                        {
-                                                            item.title.split("").map((char, index) =>
-                                                                <motion.span
-                    viewport={{once: true}}
-                                                                    key={`homeHouseTitle${index}`}
-                                                                    variants={animatePullUp}
-                                                                    initial={"offscreen"}
-                                                                    whileInView={"onscreen"}
-                                                                    custom={index}
-                                                                >
-                                                                    {char}
-                                                                </motion.span>
-                                                            )
-                                                        }
-                                                    </motion.h5>
-
-                                                    <motion.p
-                    viewport={{once: true}}
-                                                        variants={animateFadeUp}
-                                                        initial={"offscreen"}
-                                                        whileInView={"onscreen"}
-                                                        custom={0}
-
-                                                        className='text-sm text-white tracking-widest'>
-                                                        {`${item.description.slice(0, 90)}...`}
-                                                    </motion.p>
-
-                                                    <motion.div
-                    viewport={{once: true}}
-                                                        variants={animateVisible}
-                                                        initial={"offscreen"}
-                                                        whileInView={"onscreen"}
-                                                        custom={0.7}
-
-                                                        className='flex w-full'
-                                                    >
-
-
-                                                        <Link href={`${rootUrl}/house-types/${key}`} className='w-full flex'>
-                                                            <Button onClick={() => { }}
-                                                                className={` tracking-widest text-[15px] base-background2 w-full h-[40px] sm:hover:bg-[#f0f0f0]
-                                                        text-gray-900 sm:hover:text-orange-800 sm:hover:transition-colors hover:ease-linear sm:hover:duration-500`}
-                                                                placeholder='' onPointerEnterCapture onPointerLeaveCapture
-                                                            >
-                                                                <span className={`${interFont.className} capitalize text-sm`}>
-                                                                    {"View"}
-                                                                </span>
-                                                            </Button>
-                                                        </Link>
-
-                                                    </motion.div>
-
-
-
-                                                </div>
                                             </div>
 
                                         </div>
@@ -209,7 +159,7 @@ export const HouseComponent = () => {
 
 
                 <motion.div
-                    viewport={{once: true}}
+                    viewport={{ once: true }}
                     variants={animateFadeUp}
                     initial={"offscreen"}
                     whileInView={"onscreen"}
@@ -218,7 +168,7 @@ export const HouseComponent = () => {
                     className='flex w-full ml-[5%]'
                 >
 
-                    <Link href={`${rootUrl}/house-types/${houseTypes[9].id}`} className='mt-6 ml-6 flex items-center gap-x-2 base-color1 font-bold'>
+                    <Link href={`${rootUrl}/projects`} className='mt-6 ml-6 flex items-center gap-x-2 base-color1 font-bold'>
                         <p className='text-lg'>
                             {"Explore More"}
                         </p>

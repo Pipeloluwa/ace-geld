@@ -11,29 +11,7 @@ export const ThreeDComponent: React.FC<IThreeD> = ({ link_3d }) => {
 
 
     return (
-        <div className='w-full flex flex-col justify-center mt-10 gap-y-10'>
-
-
-            <div className='flex flex-wrap'>
-                {
-                    "The house in 3D".split("").map((char, index) =>
-                        <motion.p
-                    viewport={{once: true}}
-                            key={`Welcome to${index}`}
-                            variants={animateGradualSpacing}
-                            initial={"offscreen"}
-                            whileInView={"onscreen"}
-                            custom={index}
-
-                            style={{ whiteSpace: "pre-wrap" }}
-                            className='base-color1 text-xl font-bold'>
-
-                            {char}
-                        </motion.p>
-                    )
-                }
-            </div>
-
+        <div className='w-full flex flex-col justify-center gap-y-10'>
 
             <motion.div
                     viewport={{once: true}}
@@ -48,7 +26,7 @@ export const ThreeDComponent: React.FC<IThreeD> = ({ link_3d }) => {
                 <iframe
                     src={link_3d}
                     title='3D Page'
-                    className='h-full w-full bg-gray-800'
+                    className={`${fullScreenState ? 'pointer-events-auto': 'pointer-events-none md:pointer-events-auto'} h-full w-full bg-gray-800`}
                 >
 
                 </iframe>
@@ -61,10 +39,16 @@ export const ThreeDComponent: React.FC<IThreeD> = ({ link_3d }) => {
                         `}
                 >
 
-                    <span className={`${interFont.className} capitalize flex gap-x-2 text-sm`}>
+                    <span className={`${interFont.className} md:flex hidden capitalize gap-x-2 text-sm`}>
                         {`${fullScreenState ? "Exit Fullscreen" : "Show Fullscreen"}`}
                         <BiFullscreen className="size-[20px]" />
                     </span>
+
+                    <span className={`${interFont.className} md:hidden flex capitalize gap-x-2 text-sm`}>
+                        {`${fullScreenState ? "Exit Fullscreen" : "Interact"}`}
+                        <BiFullscreen className="size-[20px]" />
+                    </span>
+
                 </button>
 
             </motion.div>

@@ -71,7 +71,7 @@ export const WelcomeComponent = () => {
 
 
 
-                    <Link href={`${rootUrl}/house-types/${houseTypes[10].id}`} >
+                    <Link href={`${rootUrl}/projects`} >
                         <motion.div
                             variants={animateBlurIn}
                             initial={"offscreen"}

@@ -376,21 +376,9 @@ export const FooterComponent = () => {
                                         variants={animateFadeUp}
                                         initial={"offscreen"}
                                         whileInView={"onscreen"}
-                                        custom={0.6}
-                                    >
-                                        <Link href={`${rootUrl}/house-types/${houseTypes[11].id}`} >
-                                            {"House Types"}
-                                        </Link>
-                                    </motion.div>
-
-
-                                    <motion.div
-                                        variants={animateFadeUp}
-                                        initial={"offscreen"}
-                                        whileInView={"onscreen"}
                                         custom={0.8}
                                     >
-                                        <Link href={`${rootUrl}/projects/${projects[5].id}`} >
+                                        <Link href={`${rootUrl}/projects`} >
                                             {"Projects"}
                                         </Link>
                                     </motion.div>

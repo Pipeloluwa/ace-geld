@@ -29,10 +29,23 @@ export const ServiceComponent = () => {
     },
 
     {
+      title: "Interior",
+      description: `Interior design is the art of enhancing indoor spaces to create aesthetically pleasing and functional environments. We focus on crafting interiors that reflect style, comfort, and efficiency, ensuring every detail contributes to an inviting and harmonious atmosphere.`,
+      icon: <MdOutlineManageHistory className="size-[50px]" />,
+    },
+
+    {
       title: "Project Management",
       description: `At Acegeld effective project management is the backbone of every successful endeavor. We take pride in our ability to plan, execute, and oversee projects with a meticulous approach that ensures quality, efficiency, and timely delivery.`,
       icon: <MdOutlineManageHistory className="size-[50px]" />,
     },
+
+    {
+      title: "Quality Control",
+      description: `Quality control is our commitment to excellence, ensuring that every product and service meets the highest standards. Through meticulous inspection, testing, and continuous improvement, we guarantee reliability, durability, and customer satisfaction in everything we deliver.`,
+      icon: <MdOutlineManageHistory className="size-[50px]" />,
+    },
+
   ];
 
   const [projectHover, setProjectHover] = useState<string>("");
@@ -63,8 +76,8 @@ export const ServiceComponent = () => {
         </motion.p>
       </div>
 
-      <div className="w-full lg:h-[550px] flex lg:flex-row flex-col-reverse justify-between lg:gap-x-6 lg:gap-y-0 gap-y-16">
-        <div className="lg:w-[50%] w-full px-[10px] h-full flex flex-col justify-between lg:gap-y-3 gap-y-8">
+      <div className="w-full h-full flex lg:flex-row flex-col-reverse justify-between lg:gap-x-6 lg:gap-y-0 gap-y-16">
+        <div className="lg:w-[50%] w-full px-[10px] h-full flex flex-col justify-between gap-y-8">
           {servicesData.map((item, index) => (
             <motion.div
               key={`serviceDataSample${index}`}
@@ -91,7 +104,7 @@ export const ServiceComponent = () => {
           variants={animateBlurIn}
           initial={"offscreen"}
           whileInView={"onscreen"}
-          className="lg:w-[50%] w-full lg:h-full h-[500px] bg-gray-300 overflow-hidden"
+          className="lg:w-[50%] w-full lg:h-auto h-[500px] bg-gray-300 overflow-hidden"
         >
           <img
             alt="about picture"

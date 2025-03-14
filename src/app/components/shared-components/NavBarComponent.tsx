@@ -100,100 +100,11 @@ const NavBarComponent = () => {
                                 </Link>
 
 
-
-                                <Accordion
-                                    open= {openHouseState}
-                                    icon= {openHouseState ? <BiChevronUp/> : <BiChevronDown/>}
-                                    placeholder= {""}
-                                    onPointerEnterCapture
-                                    onPointerLeaveCapture
-                                    className={`${openHouseState && 'bg-gray-800/50'} w-full flex flex-col ml-2 rounded-2xl`}
-                                >
-                                    <AccordionHeader 
-                                        onClick={() => setOpenHouseState(value => !value)} 
-                                        placeholder= {""}
-                                        onPointerEnterCapture
-                                        onPointerLeaveCapture
-                                        className={`cursor-pointer ${interFont.className} ${navValueLocal === "House Types"  ? 'bg-white shadow-gray-500 text-orange-600 hover:text-orange-600' 
-                                            : ' text-white hover:text-white' } border-none w-full text-sm py-2 px-4 transition-colors duration-300 ease-linear rounded-2xl
-                                            `}
-                                        >
-                                        <h4>
-                                            {"House Types"}
-                                        </h4>
-
-                                        </AccordionHeader>
-
-                                        <AccordionBody>
-                                            <ul className='w-full lg:ml-10 pl-4 mt-4 flex flex-col gap-y-6 text-sm'>
-                                                {
-                                                    houseTypes.map((item, index) =>
-                                                        <Link 
-                                                            key={`houseTypes${item.id}${index}`} 
-                                                            href={`${rootUrl}/house-types/${item.id}`}
-                                                                onClick={closeDrawer_}
-                                                            className={`${interFont.className} w-[70%] flex text-white`}
-                                                            >
-                                                            {item.subMenu}
-                                                        </Link>
-
-                                                    )
-                                                }
-
-                                            </ul>
-                                           
-                                        </AccordionBody>
-                                </Accordion>
-
-
-
-                                
-                                <Accordion
-                                    open= {openProjectState}
-                                    icon= {openProjectState ? <BiChevronUp/> : <BiChevronDown/>}
-                                    placeholder= {""}
-                                    onPointerEnterCapture
-                                    onPointerLeaveCapture
-                                    className={`${openProjectState && 'bg-gray-800/50'} w-full flex flex-col ml-2 rounded-2xl`}
-                                >
-                                    <AccordionHeader 
-                                        onClick={() => setOpenProjectState(value => !value)} 
-                                        placeholder= {""}
-                                        onPointerEnterCapture
-                                        onPointerLeaveCapture
-                                        className={`cursor-pointer ${interFont.className} ${navValueLocal === "Projects"  ? 'bg-white shadow-gray-500 text-orange-600 hover:text-orange-600' 
-                                            : '  text-white hover:text-white' }
-                                                
-                                                 border-none w-full text-sm py-2 px-4 transition-colors duration-300 ease-linear rounded-2xl
-                                            `}
-                                        >
-                                        <h4>
-                                            {"Projects"}
-                                        </h4>
-
-                                        </AccordionHeader>
-
-                                        <AccordionBody>
-                                            <ul className='w-full lg:ml-10 pl-4 mt-4 flex flex-col gap-y-6 text-sm'>
-                                                {
-                                                    projects.map((item, index) =>
-                                                        <Link 
-                                                            key={`projects${item.id}${index}`} 
-                                                            href={`${rootUrl}/projects/${item.id}`}
-                                                                onClick={closeDrawer_}
-                                                            className={`${interFont.className} w-[70%] flex text-white`}
-                                                            >
-                                                            {item.subMenu}
-                                                        </Link>
-
-                                                    )
-                                                }
-
-                                            </ul>
-                                           
-                                        </AccordionBody>
-                                </Accordion>
-
+                                <Link href={`${rootUrl}/projects`} 
+                                    onClick={closeDrawer_}
+                                    className={`cursor-pointer ${navValueLocal=== 'Projects' ? 'bg-white shadow-gray-500 text-orange-600': ''} p-2 px-4 ml-2 transition-colors duration-300 ease-linear rounded-2xl`}>
+                                    {"Projects"}
+                                </Link>
 
 
                                 <Link href={`${rootUrl}/contact`}  
@@ -204,11 +115,11 @@ const NavBarComponent = () => {
 
 
 
-                                <Link href={`${rootUrl}/contact`} 
+                                {/* <Link href={`${rootUrl}/contact`} 
                                     onClick={closeDrawer_}
                                     className={` cursor-pointer border-2 text-white border-white bg-transparent h-10 min-w-[150px] flex justify-center items-center rounded-lg text-center shadow-sm shadow-gray-700`}>
                                     {"Book A Tour"}
-                                </Link>
+                                </Link> */}
                             
                             </ul>
 
@@ -239,7 +150,7 @@ const NavBarComponent = () => {
 
 
 
-                <ul className='lg:flex hidden w-full gap-x-3 justify-center items-center'>
+                <ul className='lg:flex hidden w-full gap-x-6 justify-center items-center'>
                     <Link href={`${rootUrl}`} className={`cursor-pointer ${navValueLocal=== 'Home' ? 'bg-white shadow-gray-500 text-orange-600': ''} hover:bg-orange-400 hover:text-white py-2 px-4 rounded-2xl transition-colors duration-300 ease-linear`}> 
                         {"Home"}
                     </Link>
@@ -248,9 +159,9 @@ const NavBarComponent = () => {
                         {"About"}
                     </Link>
 
-                    <SubMenuComponent menu='House Types' urlPath={"house-types"} navValueLocal={navValueLocal} subMenus={houseTypes}/>
-
-                    <SubMenuComponent menu='Projects' urlPath={"projects"} navValueLocal={navValueLocal} subMenus={projects}/>
+                    <Link href={`${rootUrl}/projects`} className={`cursor-pointer ${navValueLocal=== 'Projects' ? 'bg-white shadow-gray-500 text-orange-600': ''} hover:bg-orange-400 hover:text-white py-2 px-4 rounded-2xl transition-colors duration-300 ease-linear`}>
+                        {"Projects"}
+                    </Link>
 
                     <Link href={`${rootUrl}/contact`}  className={`cursor-pointer ${navValueLocal=== 'Contact' ? 'bg-white shadow-gray-500 text-orange-600': ''} hover:bg-orange-400 hover:text-white py-2 px-4 rounded-2xl transition-colors duration-300 ease-linear`}>
                         {"Contact"}
@@ -261,12 +172,12 @@ const NavBarComponent = () => {
 
 
 
-                <ul className='lg:flex hidden justify-end items-center gap-x-[20px] text-[13px]'>
+                {/* <ul className='lg:flex hidden justify-end items-center gap-x-[20px] text-[13px]'>
                     <Link href={"contact"} className={` cursor-pointer border-2 text-white border-white bg-transparent h-10 min-w-[150px] flex justify-center items-center rounded-lg text-center shadow-sm shadow-gray-700`}>
                         {"Book A Tour"}
                     </Link>
 
-                </ul>
+                </ul> */}
 
 
 

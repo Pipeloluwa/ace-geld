@@ -52,7 +52,10 @@ export const projectsBaseData = {
         "project_up_close": [
             "/images/pictures/projects/renovation_interior/bedroom.webp",
             "/images/pictures/projects/renovation_interior/room.webp",
-            "/images/pictures/projects/renovation_interior/cover.webp"
+            "/images/pictures/projects/renovation_interior/cover.webp",
+            "/images/pictures/projects/renovation_interior/IMG-20250124-WA0051.webp",
+            "/images/pictures/projects/renovation_interior/IMG-20250124-WA0043.webp",
+            "/images/pictures/projects/renovation_interior/IMG-20250206-WA0092.webp"
         ],
         "more_projects": [
             { "title": "Acacia Deluxe1", "description": "An upgraded version of the Acacia model with additional features.", "picture": "/images/pictures/projects/eden-height.webp" },

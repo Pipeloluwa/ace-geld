@@ -114,7 +114,7 @@ export const TeamExpertComponent = () => {
                   whileInView={"onscreen"}
                   custom={0}
                 >
-                  <Link href={"mailto:"} className='underline base-color1'>
+                  <Link href={`mailto:${item.email}`} className='underline base-color1'>
                     {item.email}
                   </Link>
                 </motion.div>
