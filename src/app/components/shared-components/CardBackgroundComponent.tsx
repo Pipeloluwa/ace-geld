@@ -28,7 +28,7 @@ export const CardBackgroundComponent: React.FC<ICardBackground> = ({ imagePath, 
                 custom={index}
 
                 style={{ whiteSpace: "pre-wrap" }}
-                className='xl:text-6xl md:text-5xl text-3xl text-shadow text-white  tracking-widest font-extrabold'>
+                className='london-font-bold xl:text-6xl md:text-5xl text-3xl text-shadow text-white  tracking-widest font-extrabold'>
 
                 {char}
               </motion.p>

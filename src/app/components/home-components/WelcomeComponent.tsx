@@ -51,7 +51,7 @@ export const WelcomeComponent = () => {
                             variants={animateBlurIn}
                             initial={"offscreen"}
                             whileInView={"onscreen"}
-                            className={`md:text-8xl text-5xl tracking-widest`}>
+                            className={`london-font-bold md:text-8xl text-5xl tracking-widest`}>
 
                             {"AceGeld"}
                         </motion.h1>
@@ -71,14 +71,14 @@ export const WelcomeComponent = () => {
 
 
 
-                    <Link href={`${rootUrl}/projects`} >
+                    <Link href={`${rootUrl}/explore`} >
                         <motion.div
                             variants={animateBlurIn}
                             initial={"offscreen"}
                             whileInView={"onscreen"}
                         >
                             <Button onClick={() => { }} className={` tracking-widest text-[15px] base-background2 big-button sm:hover:bg-[#f0f0f0]
-                        text-gray-900 sm:hover:text-orange-800 sm:hover:transition-colors hover:ease-linear sm:hover:duration-500`}
+                            text-gray-900 sm:hover:text-orange-800 sm:hover:transition-colors hover:ease-linear sm:hover:duration-500`}
                                 placeholder='' onPointerEnterCapture onPointerLeaveCapture
                             >
 

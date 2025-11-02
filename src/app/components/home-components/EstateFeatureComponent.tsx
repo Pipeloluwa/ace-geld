@@ -87,7 +87,7 @@ export const EstateFeatureComponent:React.FC<IEstateData> = ({estate_features}) 
                                 estate_features.map((item, index) => {
                                     return (
                                         <motion.div
-                    viewport={{once: true}} 
+                                            viewport={{once: true}} 
                                             key={`estateFeaturesDataKey${index}`} 
                                             variants={animateFadeUp}
                                             initial={"offscreen"}

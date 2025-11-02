@@ -1,5 +1,5 @@
 "use client";
-import { animateBlurIn, animateGradualSpacing } from '@/app/animation/animationVariants';
+import { animateBlurIn } from '@/app/animation/animationVariants';
 import { interFont } from '@/app/fonts/fontsConfig';
 import { IThreeD } from '@/app/interfaces/ITypeData'
 import { motion } from 'motion/react';
@@ -30,6 +30,11 @@ export const ThreeDComponent: React.FC<IThreeD> = ({ link_3d }) => {
                 >
 
                 </iframe>
+
+
+                <div className='z-50 w-[110px] h-[40px] fixed right-[20px] top-[14px] flex justify-center items-center text-center bg-black/50 text-white'>
+                    {"AceGeld"}
+                </div>
 
 
 

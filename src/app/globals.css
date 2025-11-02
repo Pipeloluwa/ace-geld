@@ -8,7 +8,29 @@ body {
 }
 
 
+@font-face {
+  font-family: 'LondonFont';
+  src: url('/fonts/LondonFont/font.otf') format('opentype');
+  /* font-weight: normal;
+  font-style: normal; */
+  font-display: swap;
+}
 
+@font-face {
+  font-family: 'LondonFontBold';
+  src: url('/fonts/LondonFont/font-bold.woff') format('opentype');
+  /* font-weight: normal;
+  font-style: normal; */
+  font-display: swap;
+}
+
+.london-font{
+  font-family: 'LondonFont', sans-serif;
+}
+
+.london-font-bold{
+  font-family: 'LondonFontBold', sans-serif;
+}
 
 .menu-hover-color:hover{
   color: white !important;

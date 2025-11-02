@@ -23,13 +23,21 @@ export const HouseComponent = () => {
 
 
     const newHouseData = [
-        "/images/pictures/houses/pine-penthouse.webp",
-        "/images/pictures/projects/renovation_interior/bedroom.webp",
-        "/images/pictures/projects/renovation_interior/room.webp",
-        "/images/pictures/projects/renovation_interior/cover.webp",
-        "/images/pictures/projects/renovation_interior/IMG-20250124-WA0051.webp",
-        "/images/pictures/projects/renovation_interior/IMG-20250124-WA0043.webp",
-        "/images/pictures/projects/renovation_interior/IMG-20250206-WA0092.webp"
+        "/images/pictures/projects/a1.webp",
+        "/images/pictures/projects/a2.webp",
+        "/images/pictures/projects/a3.webp",
+        "/images/pictures/projects/a4.webp",
+        "/images/pictures/projects/a5.webp",
+        "/images/pictures/projects/a6.webp",
+        "/images/pictures/projects/a7.webp",
+        "/images/pictures/projects/a8.webp",
+        "/images/pictures/projects/a9.webp",
+        "/images/pictures/projects/a10.webp",
+        "/images/pictures/projects/a11.webp",
+        "/images/pictures/projects/a12.webp",
+        "/images/pictures/projects/a13.webp",
+        "/images/pictures/projects/a14.webp",
+        "/images/pictures/projects/a16.webp"
     ];
 
     const sliderRef = useRef<Slider | null>(null);

@@ -22,9 +22,7 @@ export const ProjectsBaseComponent:React.FC<IProjectInfo> = (projectDataResponse
 
     
     return (
-        <div className="-mt-[80px] pb-[120px] gap-y-24 flex flex-col">
-
-            <CardBackgroundComponent imagePath='/images/pictures/pages/project.webp' title='Projects' />
+        <>
 
             <ProjectsInfoComponent title={projectDataResponse.title} projectData={projectDataResponse.projectData} />
 
@@ -35,6 +33,6 @@ export const ProjectsBaseComponent:React.FC<IProjectInfo> = (projectDataResponse
             <MoreProjects title={projectDataResponse.title}/>
 
 
-        </div>
+        </>
     )
 }

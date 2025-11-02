@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         id="parentDivRef"
-        className={`${interFont.className} antialiased overflow-hidden text-gray-900 bg-gray-400`}
+        className={'london-font antialiased overflow-hidden text-gray-900 bg-gray-400'}
       >
         <StateProvider>
           <PageContainer>

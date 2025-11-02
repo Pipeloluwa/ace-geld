@@ -20,7 +20,7 @@ export const ProjectComponent = () => {
 
             <div className='lg:w-[70%] w-full mx-auto flex flex-col gap-y-3'>
                 <motion.h2
-                    viewport={{once: true}}
+                    viewport={{ once: true }}
                     variants={animateFadeDown}
                     initial={"offscreen"}
                     whileInView={"onscreen"}
@@ -32,7 +32,7 @@ export const ProjectComponent = () => {
                 </motion.h2>
 
                 <motion.div
-                    viewport={{once: true}}
+                    viewport={{ once: true }}
                     variants={animateFadeUp}
                     initial={"offscreen"}
                     whileInView={"onscreen"}
@@ -50,15 +50,15 @@ export const ProjectComponent = () => {
             <div className='w-full mx-auto flex flex-col justify-between gap-x-6'>
 
                 <div className='w-full h-full flex flex-col gap-y-16'>
-                                    <ThreeDComponent link_3d='https://www.kuula.co/share/hqkhz?logo=1&info=1&fs=1&vr=0&gyro=0&autorotate=0.35&thumbs=1&margin=20' />
-                                    <ThreeDComponent link_3d='https://www.kuula.co/share/hqk7Q?logo=1&info=1&fs=1&vr=0&gyro=0&autorotate=0.35&thumbs=1&margin=20' />
-                                    <ThreeDComponent link_3d='https://www.kuula.co/share/hqkp5?logo=1&info=1&fs=1&vr=0&gyro=0&autorotate=0.35&thumbs=1&margin=20' />
-                                
+                    <ThreeDComponent link_3d='https://www.kuula.co/share/hqkhz?logo=1&info=1&fs=1&vr=0&gyro=0&autorotate=0.35&thumbs=1&margin=20' />
+                    <ThreeDComponent link_3d='https://www.kuula.co/share/hqk7Q?logo=1&info=1&fs=1&vr=0&gyro=0&autorotate=0.35&thumbs=1&margin=20' />
+                    <ThreeDComponent link_3d='https://www.kuula.co/share/hqkp5?logo=1&info=1&fs=1&vr=0&gyro=0&autorotate=0.35&thumbs=1&margin=20' />
+
                 </div>
 
 
                 <motion.div
-                    viewport={{once: true}}
+                    viewport={{ once: true }}
                     variants={animateFadeUp}
                     initial={"offscreen"}
                     whileInView={"onscreen"}
