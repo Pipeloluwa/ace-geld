@@ -32,7 +32,7 @@ export const ThreeDComponent: React.FC<IThreeD> = ({ link_3d }) => {
                 </iframe>
 
 
-                <div className='z-50 w-[110px] h-[40px] absolute right-[20px] top-[14px] flex justify-center items-center text-center bg-black/50 text-white'>
+                <div className='z-50 w-[120px] h-[40px] absolute right-[18px] top-[18px] flex justify-center items-center text-center bg-black text-white'>
                     {"AceGeld"}
                 </div>
 
