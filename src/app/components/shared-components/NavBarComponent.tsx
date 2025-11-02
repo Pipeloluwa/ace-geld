@@ -101,7 +101,7 @@ const NavBarComponent = () => {
 
                                 <Link href={`${rootUrl}/explore`} 
                                     onClick={closeDrawer_}
-                                    className={`cursor-pointer ${navValueLocal=== 'Projects' ? 'bg-white shadow-gray-500 text-orange-600': ''} p-2 px-4 ml-2 transition-colors duration-300 ease-linear rounded-2xl`}>
+                                    className={`cursor-pointer ${navValueLocal=== 'Explore' ? 'bg-white shadow-gray-500 text-orange-600': ''} p-2 px-4 ml-2 transition-colors duration-300 ease-linear rounded-2xl`}>
                                     {"Explore"}
                                 </Link>
 
