@@ -13,7 +13,8 @@ import { GrServices, GrFingerPrint } from "react-icons/gr";
 import { LuScanFace } from "react-icons/lu";
 import { MdCable, MdHub } from "react-icons/md";
 
-export const rootUrl = "https://www.acegeld.com";
+export const rootUrl = "./";
+export const clientUrl= "https://client.acegeld.com/";
 
 export const estateFeaturesIcon = [
   <FaSwimmer className="size-[70px]" />,

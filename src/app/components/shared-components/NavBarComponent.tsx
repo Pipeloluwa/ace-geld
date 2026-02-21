@@ -8,7 +8,7 @@ import { Accordion, AccordionBody, AccordionHeader, Drawer } from '@material-tai
 import { IoCloseSharp } from 'react-icons/io5';
 import LogoComponent from './LogoComponent';
 import { SubMenuComponent } from './SubMenuComponent';
-import { rootUrl } from '@/app/variables/sharedVariables';
+import { clientUrl, rootUrl } from '@/app/variables/sharedVariables';
 import { houseTypes } from '@/app/variables/houseVariables';
 import { projects } from '@/app/variables/projectsVariables';
 import { BiChevronDown, BiChevronUp } from 'react-icons/bi';
@@ -182,12 +182,12 @@ const NavBarComponent = () => {
 
 
 
-                {/* <ul className='lg:flex hidden justify-end items-center gap-x-[20px] text-[13px]'>
-                    <Link href={"contact"} className={` cursor-pointer border-2 text-white border-white bg-transparent h-10 min-w-[150px] flex justify-center items-center rounded-lg text-center shadow-sm shadow-gray-700`}>
-                        {"Book A Tour"}
+                <ul className='lg:flex hidden justify-end items-center gap-x-[20px] text-[13px]'>
+                    <Link href={clientUrl} className={` cursor-pointer border-2 text-white border-white bg-transparent h-10 min-w-[150px] flex justify-center items-center rounded-lg text-center shadow-sm shadow-gray-700`}>
+                        {"Login"}
                     </Link>
 
-                </ul> */}
+                </ul>
 
 
 
