@@ -1,18 +1,13 @@
-"use client";
+"use client";;
 import { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
 import { RootState } from '@/app/state_management/stores/store';
 import Link from 'next/link';
 import { TiThMenu } from 'react-icons/ti';
-import { Accordion, AccordionBody, AccordionHeader, Drawer } from '@material-tailwind/react';
+import { Drawer } from '@material-tailwind/react';
 import { IoCloseSharp } from 'react-icons/io5';
 import LogoComponent from './LogoComponent';
-import { SubMenuComponent } from './SubMenuComponent';
 import { clientUrl, rootUrl } from '@/app/variables/sharedVariables';
-import { houseTypes } from '@/app/variables/houseVariables';
-import { projects } from '@/app/variables/projectsVariables';
-import { BiChevronDown, BiChevronUp } from 'react-icons/bi';
-import { interFont } from '@/app/fonts/fontsConfig';
 
 
 const NavBarComponent = () => {
@@ -64,15 +59,14 @@ const NavBarComponent = () => {
                 ?
                 <Drawer 
 
-                    open= {openDrawer} 
-                    onClose={() => {closeDrawer_()}} 
-                    placement='right'
-                    size={400}
-                    overlay= {false}
-                                
-                    className='lg:hidden visible fixed top-0 bottom-0 flex justify-start flex-col md:w-[50%] w-[70%] h-screen bg-gradient-to-b from-gray-900 to-black'
-                    placeholder={""} onPointerEnterCapture={ () => {}} onPointerLeaveCapture={ () => {}}
-                    >
+                        open={openDrawer}
+                        onClose={() => { closeDrawer_(); } }
+                        placement='right'
+                        size={400}
+                        overlay={false}
+
+                        className='lg:hidden visible fixed top-0 bottom-0 flex justify-start flex-col md:w-[50%] w-[70%] h-screen bg-gradient-to-b from-gray-900 to-black'
+                        placeholder={""} onPointerEnterCapture={() => { } } onPointerLeaveCapture={() => { } } onResize={undefined} onResizeCapture={undefined}                    >
 
 
                     <div className='fixed right-0 flex justify-end items-end'>

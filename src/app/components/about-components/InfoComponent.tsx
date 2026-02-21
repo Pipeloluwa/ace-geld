@@ -484,13 +484,12 @@ export const InfoComponent = () => {
         >
           <Link href={"/pages/client-pages/highlights-page"}>
             <Button
-              onClick={() => {}}
+              onClick={() => { } }
               className={` tracking-widest text-[15px] base-background2 w-full h-[40px] sm:hover:bg-[#f0f0f0]
                                 text-gray-900 sm:hover:text-orange-800 sm:hover:transition-colors hover:ease-linear sm:hover:duration-500`}
               placeholder=""
               onPointerEnterCapture
-              onPointerLeaveCapture
-            >
+              onPointerLeaveCapture onResize={undefined} onResizeCapture={undefined}            >
               <span className={`${interFont.className} capitalize text-sm`}>
                 {"Speak To Us"}
               </span>
