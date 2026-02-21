@@ -115,11 +115,11 @@ const NavBarComponent = () => {
 
 
 
-                                {/* <Link href={`${rootUrl}/contact`} 
+                                <Link href={clientUrl} 
                                     onClick={closeDrawer_}
-                                    className={` cursor-pointer border-2 text-white border-white bg-transparent h-10 min-w-[150px] flex justify-center items-center rounded-lg text-center shadow-sm shadow-gray-700`}>
-                                    {"Book A Tour"}
-                                </Link> */}
+                                    className={` cursor-pointer base-background2 sm:hover:bg-[#f0f0f0] text-gray-900 sm:hover:text-orange-800 sm:hover:transition-colors hover:ease-linear sm:hover:duration-500 h-10 min-w-[150px] flex justify-center items-center rounded-lg text-center shadow-sm shadow-gray-700`}>
+                                    {"Login"}
+                                </Link>
                             
                             </ul>
 
@@ -177,7 +177,8 @@ const NavBarComponent = () => {
 
 
                 <ul className='lg:flex hidden justify-end items-center gap-x-[20px] text-[13px]'>
-                    <Link href={clientUrl} className={` cursor-pointer border-2 text-white border-white bg-transparent h-10 min-w-[150px] flex justify-center items-center rounded-lg text-center shadow-sm shadow-gray-700`}>
+                    <Link href={clientUrl} 
+                        className={` cursor-pointer h-10 min-w-[150px] flex justify-center items-center rounded-lg text-center base-background2 sm:hover:bg-[#f0f0f0] text-gray-900 sm:hover:text-orange-800 sm:hover:transition-colors hover:ease-linear sm:hover:duration-500 shadow-sm shadow-gray-700`}>
                         {"Login"}
                     </Link>
 
